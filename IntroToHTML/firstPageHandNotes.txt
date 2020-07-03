@@ -1,0 +1,31 @@
+- Hitting Tab after typing html in Sublime, creates the boilerplate automatically for us.
+
+- MDN: Mozilla Developer Network (https://developer.mozilla.org/en-US/)
+
+- <html> tab is the root of an HTML file, it is followed by <head> and <body> tags
+
+- <head> tag, provides general information; so basically everything that we don't see on the paper as a user, things like stylesheet files, js files; they all go in the head. In conclusion, here is where we put metadata
+
+- <body> is where we put all our content
+
+- <!-- This is a comment -->, simply to fastly create a comment, select the content or go on a line and hit 'Ctrl + /'
+
+- Although <title> won't show up on our page, it's important because it is the text that goes up to the tab name. And pay attention to the reason it won't show up on the page is it is in the head/metadata section. So it is also the name that shows up on the google results
+
+- MDN Element Reference: Lists all the elements of HTML (https://developer.mozilla.org/en-US/docs/Web/HTML/Element) around 100 or so but 15-20 of'em frequently used
+
+- <h1> is the most, <h6> is the least important heading... Tags like this headings called as 'block level elements' which basically means even we write'em on a single line they are seperately on new line shown on the webpage
+
+- 'Inline elements' are the ones which if written on the same line they are shown on the same line.
+
+- <p> Paragraf tag makes the text block level
+
+- <b> tag is the basic way to bolden a text; this is inline also; but there is a better tag to do it which is <strong> tag. Although it does exactly the same thing it emphasizes the importance of it in the source code -as far as I guess- and things like these tags called 'semantic mark' in HTML5
+
+- <i> makes the text italic, it's inline; like the above one, <em> tag makes the same but a better way in terms of semantic marks
+
+- <ol> tag creates an ordered list, which means every item takes number in front of it as 1,2,3 etc, and inside this list we have to specify every one of the elements with <li> tags
+
+<ol> tag creates an unordered list, which just takes bulletpoints in front of'em, again inside this list we have to specify every one of the elements with <li> tags
+
+- we can make lists in lists
