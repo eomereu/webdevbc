@@ -1,4 +1,4 @@
-- Hitting Tab after typing html in Sublime, creates the boilerplate automatically for us.
+- Hitting Tab after typing html in Sublime, creates the boilerplate automatically for us. (After giving the file .html extension)
 
 - MDN: Mozilla Developer Network (https://developer.mozilla.org/en-US/)
 
@@ -14,7 +14,7 @@
 
 - MDN Element Reference: Lists all the elements of HTML (https://developer.mozilla.org/en-US/docs/Web/HTML/Element) around 100 or so but 15-20 of'em frequently used
 
-- <h1> is the most, <h6> is the least important heading... Tags like this headings called as 'block level elements' which basically means even we write'em on a single line they are seperately on new line shown on the webpage
+- <h1> is the most, <h6> is the least important heading... Tags like this headings called as 'block level elements' which basically means even we write'em on a single line they are seperately shown on lines on the webpage
 
 - 'Inline elements' are the ones which if written on the same line they are shown on the same line.
 
@@ -26,6 +26,27 @@
 
 - <ol> tag creates an ordered list, which means every item takes number in front of it as 1,2,3 etc, and inside this list we have to specify every one of the elements with <li> tags
 
-<ol> tag creates an unordered list, which just takes bulletpoints in front of'em, again inside this list we have to specify every one of the elements with <li> tags
+- <ul> tag creates an unordered list, which just takes bulletpoints in front of'em, again inside this list we have to specify every one of the elements with <li> tags
 
 - we can make lists in lists
+
+- Ctrl + Shift + D, automatically copies the current line and pastes on next line directly.
+
+- First headings, outer lists, inner lists
+
+- Inside an html file, typing "lorem" and hitting Tab right after it, is going to give a long text to us, automatically.
+
+- <div> is a way of grouping things together. But actually it won't give us much benefit until we get to CSS. Because then we will go and style that group together. It is a block level element btw, which means inner divs will cause new lines
+
+- <span> is also a generic container but there is a key difference is an inline one. So we will use this one inside of a div if we want to give that part a more specific feature along with the div features.
+
+- Attributes: adding additional information to tags. Its form is like the following, a key-value pair,
+	<tag name="value"></tag>
+
+- <br> tag is a break line tag, which passes you to the next line
+
+- We don't need a closing tag for <img>, <br> attributes.
+
+- Anchor Tag is the one we all see in every Google search result actually, usage:
+	<a href="url">Link Text</a>
+I need to make my link explicit at this point. So I have to add that "http://" part at the beginning otherwise it tries to find that following part at my current folder!
