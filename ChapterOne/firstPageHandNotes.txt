@@ -50,3 +50,22 @@
 - Anchor Tag is the one we all see in every Google search result actually, usage:
 	<a href="url">Link Text</a>
 I need to make my link explicit at this point. So I have to add that "http://" part at the beginning otherwise it tries to find that following part at my current folder!
+
+- Table usage:
+	<table>
+	 <thead>
+	  	<tr>
+	  	 <th>Heading for 1st column</th>
+	  	 <th>Heading for 2nd column</th>
+	  	</tr>
+	 </thead>
+	 <tbody>
+	  	<tr>
+	  	 <td>1st row 1st column</td>
+	  	 <td>1st row 2nd column</td>
+	 	 </tr>
+	 </tbody>
+	</table>
+  tr used for creating rows, td for columns, th for headings
+  <table border="1"> can be used to determine the borders but it makes more sense to do it with CSS
+  <thead> and <tbody> tags are like the head and body tags of the page, it is optional but better to use
