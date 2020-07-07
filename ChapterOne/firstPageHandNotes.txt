@@ -63,9 +63,12 @@ I need to make my link explicit at this point. So I have to add that "http://" p
 	  	<tr>
 	  	 <td>1st row 1st column</td>
 	  	 <td>1st row 2nd column</td>
-	 	 </tr>
+	 	</tr>
 	 </tbody>
 	</table>
   tr used for creating rows, td for columns, th for headings
   <table border="1"> can be used to determine the borders but it makes more sense to do it with CSS
   <thead> and <tbody> tags are like the head and body tags of the page, it is optional but better to use
+  <img width=""> can be used for reararranging the size of an image but actually we will be doing this by CSS later on. PS, it automatically scales the image by the given width
+
+- In order to create multiple cursors in Sublime, simply hold Ctrl and click on places that we want the cursor to be on
