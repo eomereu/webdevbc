@@ -99,3 +99,6 @@ The "placeholder" atr is the default text inside a box
 	An alternative and a better way to use <label> tag with <input> tags is as the following, by using "for" and "id" ATRs. By doing so we prevent nests:
 		<label for="username">Username:</label>
 		<input id="username" type="text" placeholder="username">
+
+	In order to add some validation, we can first use to check the presence of some input, "required" label. When we change type to "email" for example, it will automatically inspect the input is approppriate for an email or not.
+		<input id="email" name="email" type="email" placeholder="email" required>

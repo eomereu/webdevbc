@@ -7,9 +7,18 @@
 
 <h1>Login</h1>
 
-<form>
+<form action="http://wikipedia.org" method="post">
 
-	<label>
+ 	<label for="email">Email:</label>
+ 	<input id="email" name="email" type="email" placeholder="email" required>
+
+ 	<label for="password">Password:</label>
+ 	<input id="password" name="password" type="password" placeholder="password" required>
+
+	<input type="submit">
+
+
+<!-- 	<label>
 			Username:
 			<input name="username" type="text" placeholder="username">
 	</label>
@@ -18,19 +27,7 @@
 			Password:
 			<input name="password" type="password" placeholder="password">
 	</label>
-	<button>Submit</button> 
-
-<!-- 	An alternative and a better way of using label tag: (because it prevents the nests) --><br>
-
- 	<label for="username">Username:</label>
- 	<input id="username" type="text" placeholder="username">
-
- 	<label for="password">Password:</label>
- 	<input id="password" type="password" placeholder="password">
-
-	<input type="submit" name="">
-	<!-- This one also creates a Submit button: <button>Submit</button> -->
-
+	<button>Submit</button>  -->
 
 </form>
 
