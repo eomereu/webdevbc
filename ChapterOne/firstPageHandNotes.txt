@@ -88,4 +88,14 @@ The "name" atr specifies the key of the current input in the querystring.
 The "placeholder" atr is the default text inside a box
 	<input name="username" type="username" placeholder="username">
 
-- <label></label>
+- Ctrl + L select the current line
+
+- <label></label>: We put <input> tags into this to give them a label and make them more comprehensive:
+	<label>
+		Username:
+		<input name="username" type="username" placeholder="username">
+	</label>
+
+	An alternative and a better way to use <label> tag with <input> tags is as the following, by using "for" and "id" ATRs. By doing so we prevent nests:
+		<label for="username">Username:</label>
+		<input id="username" type="text" placeholder="username">

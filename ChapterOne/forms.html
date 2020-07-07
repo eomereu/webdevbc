@@ -8,12 +8,30 @@
 <h1>Login</h1>
 
 <form>
-	<input name="username" type="text" placeholder="username">
-	<input name="password" type="password" placeholder="password">
-	<!-- This one also creates a Submit button
-		<button>Submit</button>
-	-->
+
+	<label>
+			Username:
+			<input name="username" type="text" placeholder="username">
+	</label>
+	
+	<label>
+			Password:
+			<input name="password" type="password" placeholder="password">
+	</label>
+	<button>Submit</button> 
+
+<!-- 	An alternative and a better way of using label tag: (because it prevents the nests) --><br>
+
+ 	<label for="username">Username:</label>
+ 	<input id="username" type="text" placeholder="username">
+
+ 	<label for="password">Password:</label>
+ 	<input id="password" type="password" placeholder="password">
+
 	<input type="submit" name="">
+	<!-- This one also creates a Submit button: <button>Submit</button> -->
+
+
 </form>
 
 </body>
