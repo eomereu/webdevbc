@@ -72,3 +72,20 @@ I need to make my link explicit at this point. So I have to add that "http://" p
   <img width=""> can be used for reararranging the size of an image but actually we will be doing this by CSS later on. PS, it automatically scales the image by the given width
 
 - In order to create multiple cursors in Sublime, simply hold Ctrl and click on places that we want the cursor to be on
+
+- HTML Forms: Getting input from user:
+
+- <form></form>: It's a shell/container for inputs like username, mail, password, log in button, dropdown menus, radio buttons etc. So by just forming a 'form' we don't actually create something visual, all buttons etc. must be written explicitly in this for something visual.
+	The following attribute pair sends data from the form to a server somewhere. Action atr contains the URL to send form data to and Method specifies the type of the HTTP request. We use 'get' request when we try to retrieve some data like searching etc. and we use 'post' request when we are sending data like wanting it to be added to a database or posted to a server. i.e. Google search is get request; Facebook signup is post request:
+  	<form action="/my-form-submitting-page" method="post"> ALL THE INPUT </form>
+  By default if we don't specify the URL part it is the current location. If we don't specify the method it's a 'get' request by default.
+
+- <input> tag creates interactive controls.
+The "type" atr determines the types of input.
+	<input type="text/date/color/file/checkbox/password/radio/...">
+The "name" atr specifies the key of the current input in the querystring.
+	<input name="username" type="username">
+The "placeholder" atr is the default text inside a box
+	<input name="username" type="username" placeholder="username">
+
+- <label></label>
