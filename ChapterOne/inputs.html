@@ -1,0 +1,46 @@
+<!-- radio button -->
+<!-- select tag -->
+<!-- textarea tag -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inputs Demo</title>
+</head>
+<body>
+
+<p>Schwarz oder Weiß?</p>
+
+<form>
+	<label for="black">Schwarz</label>
+	<input name="colorPick" id="black" type="radio" value="Schwarz">
+	
+	<label for="white">Weiß</label>
+	<input name="colorPick" id="white" type="radio" value="Weiß">
+
+	<p>Was ist Ihre Lieblingsfarbe?</p>
+	<select name="color">
+		<option>Rot</option>
+		<option>Blau</option>
+		<option>Grün</option>
+		<option>Gelb</option>
+		<option>Orange</option>
+		<option>Rosa</option>
+		<option>Lila</option>
+	</select>
+
+	<p>Was ist Ihre aktuelle Stimmung?</p>
+	<select name="mood">
+		<option value="Glüklich">:)</option>
+		<option value="Neutral">:|</option>
+		<option value="Traurig">:(</option>
+	</select>
+
+	<p>Weitere Informationen über Sie:</p>
+	<textarea name="paragraph" placeholder="Dein Text hier..." rows="10" cols="50"></textarea>
+
+	<button>Weider</button>
+</form>
+
+</body>
+</html>

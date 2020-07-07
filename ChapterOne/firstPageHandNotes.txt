@@ -102,3 +102,27 @@ The "placeholder" atr is the default text inside a box
 
 	In order to add some validation, we can first use to check the presence of some input, "required" label. When we change type to "email" for example, it will automatically inspect the input is approppriate for an email or not.
 		<input id="email" name="email" type="email" placeholder="email" required>
+
+- Radio Boxes:
+	Regarding radio boxes, actually we can select more than one in radio button but cannot unselect it so we have to arrange it manually to make exactly one choice, to do this we give the choices the same "name"!, but here we must also specify the "value" of the choice for a better info sending and a better query; Used in things like gender selection etc. (Don't forget to add Labels)
+	<input for="male" name="gender" type="radio" value="male">
+	<input for="female" name="gender" type="radio" value="female">
+
+- <input type="checkbox">
+	A checkbox is the box which we can make a tick or not like selecting our skills, multiple or none
+
+- A <button></button> at the end of a form will simply submit the form
+
+- Select Tag:
+	With this tag we can create a nice dropdown selection menu. Usage:
+	<select name="color">
+		<option>Red</option>
+	</select>
+	Here because we didn't specify a value, it will automatically set the value in the query to the string on the option which is "Red" here. But sometimes we may want to specify it explicitly, to do so:
+	<select name="mood">
+		<option value="Happy">:)</option>
+	</select>
+	Now the value will be set to "Happy" in the query if we select ":)"
+
+- Textarea Tag:
+	This tag is used for inputs that are more than one line. "rows" & "cols" ATRs can be used to specify the size of the box,
