@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anmeldeseite</title>
+</head>
+<body>
+
+<h1>Anmelden</h1>
+
+<form>
+	<div>
+		<label for="firstName">Vorname:</label>
+		<input id="firstName" type="text" placeholder="John"name="firstName" required>
+
+		<label for="lastName">Nachname:</label>
+		<input id="firstName" type="text" placeholder="Smith"name="firstName" required>
+	</div>
+
+	<div>
+		<label for="male">Männlich</label>
+		<input id="male" type="radio" name="gender" value="male">
+
+		<label for="female">Weiblich</label>
+		<input id="female" type="radio" name="gender" value="female">
+
+		<label for="other">Andere</label>
+		<input id="other" type="radio" name="gender" value="other">
+	</div>
+
+	<div>
+		<label>
+			Email:
+			<input type="email" placeholder="your email" name="email" required>
+		</label>
+
+		<label>
+			Passwort:
+			<input id="password" type="password" name="password" pattern=".{5,10}" required title="5 bis 10 Zeichen">
+			<!--
+			<input id="password" type="password" name="password" minlength="5" maxlength="10" required title="5 bis 10 Zeichen">
+			-->
+		</label>
+	</div>
+
+	<div>
+		<label>Geburtsdatum:</label>
+		<select name="day">
+			<option value="">Tag</option>
+			<option>11</option>
+			<option>12</option>
+			<option>13</option>
+		</select>
+		<select name="month">
+			<option value="">Monat</option>
+			<option>Juni</option>
+			<option>Juli</option>
+		</select>
+		<select name="year">
+			<option value="">Jahr</option>
+			<option>1995</option>
+			<option>1996</option>
+		</select>
+	</div>
+
+	<div>
+		<label>
+			Ich akzeptiere die Geschäftsbedingungen.
+			<input type="checkbox" name="agreed">
+		</label>
+	</div>
+
+	<button>Anmelden</button>
+</form>
+
+</body>
+</html>

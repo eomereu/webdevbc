@@ -126,3 +126,10 @@ The "placeholder" atr is the default text inside a box
 
 - Textarea Tag:
 	This tag is used for inputs that are more than one line. "rows" & "cols" ATRs can be used to specify the size of the box,
+
+- Pattern & Required Title ATRs,
+	<input id="password" type="password" name="password" pattern=".{5,10}" required title="errorMsg">
+	We can type as much or as less as we want but cannot submit due to the pattern and the title (by adding "Please match the requested format" on the above line of our title) will be shown.
+	But if we use the following,
+	<input id="password" type="password" name="password" minlength="5" maxlength="10" required title="errorMsg">
+	Here it restricts the input between 5 to 10. We cannot even type nor less than 5 neither more than 10 characters. And the title won't be showed up to the user.
