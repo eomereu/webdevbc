@@ -22,3 +22,29 @@ CSS (Cascading Style Sheets)
 - So finally to write our CSS in a different file, we use <link> tag inside the HTML file. Hitting tab after typing 'link' will create a nicely prepared tag for us.,
 	<link rel="stylesheet" type="text/css" href="CSSFileName.css">
 	PS: It must be included in the 'head' section! 
+
+- There are three types of color system:
+	1.Hexadecimal
+	2.RGB
+	3.RGBA
+	Actually the former two refer to the same thing but have differences in both syntax and base selection. The differencelatter two
+
+- Hexadecimal colours contain six digits following a '#'. It's using base 16.
+	#_ _ _ _ _ _ : First 2 represents how much red is the colour and the others green, blue respectively.
+	 red grn blu
+	#FFFFFF : White
+	#000000 : Black
+
+- RGB colours have slight different showing style. It's using base 10, the values show red, green, blue
+	rgb(_, _, _)
+			r  g  b
+	rgb(255,255,255): White
+	rgb(0,0,0): Black
+
+- RGBA system adds a fouth field as transparency value whose range is between 0 and 1, (A stands for Alpha)
+	rgba(_, _, _, ._)
+			 r 	g  b   t
+	rgba(100,82,12,1): No transparency
+	rgba(100,82,12,0): Fully transparent (nothing shows up)
+	rgba(100,82,12,.6): Little transparency (as getting closer to 1)
+	rgba(100,82,12,.3): More transparency (as getting closer to 0)
