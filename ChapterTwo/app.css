@@ -1,11 +1,26 @@
+body {
+	/* It automatically tiles the background with itself continously so when using this, choose a continous wallpaper!
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-RKlYnQhI4K1NKk6WDPYTybp5SPKkLTIDbfbm4huCsrrqK9A&s);
+	*/
+	background: url(https://badasshelmetstore.com/wp-content/uploads/2016/10/avengers-helmets.jpg);
+	background-repeat: no-repeat; /* If we don't want the image to be repeated as above we use this */
+	background-size: cover; /* If we don't use this property the page won't cover the page */
+							/* It won't strecth out or won't fit if we don't use it */
+}
+
 h1 {
 	color: #D02311;
+	border-width: 2px;
+	border-style: solid;
+	border-color: white;
 }
 
 h4 {
-	color: rgb(66,11,200);
+	color: rgb(200,50,200);
+	background: rgba(100,80,100,.4);
+	border: 3px dashed rgba(60,200,150,.3);
 }
 
 li {
-	color: rgba(88,200,66,.3);
+	color: rgba(60,200,150,1);
 }

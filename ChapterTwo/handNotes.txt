@@ -48,3 +48,25 @@ CSS (Cascading Style Sheets)
 	rgba(100,82,12,0): Fully transparent (nothing shows up)
 	rgba(100,82,12,.6): Little transparency (as getting closer to 1)
 	rgba(100,82,12,.3): More transparency (as getting closer to 0)
+
+- Background Property Usage:
+	background: color: rgb(255,255,255); /* full color */
+	background: url(https://badasshelmetstore.com/wp-content/uploads/2016/10/avengers-helmets.jpg); /* image */
+	Alone this will replicate the image all along the page so be careful to pick a continous one if using this.
+
+- Some Background Properties:
+	background-repeat: no-repeat; /* If we don't want the image to be repeated as above we use this */
+	background-size: cover; /* If we don't use this property the page won't cover the page. It won't strecth out or won't fit depending on the resolution; if we don't use this */ 
+
+- Border Usage:
+	Normally we use border with 3 must-have properties:
+	1. width
+	2. style
+	3. color
+	So the original code looks like this:
+	border-width: 3px;
+	border-style: solid;
+	border-color: white;
+
+	But we use the following in terms of being practical:
+	border: 3px solid white; /* widht style color respectively */
