@@ -1,0 +1,24 @@
+CSS (Cascading Style Sheets)
+- They are actually seperate files that we include into our HTML files.
+
+- The General Rule:
+	that every line we write will follow...
+	selector {
+		property: value;
+		anotherProperty: value;
+	} 
+
+- 'Inline' styling is not a good idea because it doesn't seperate HTML and CSS files. Furthermore it's a lot of work to form lots of things all one at a time and especially when we want to make some changes to multiple elements,
+	<h3 style="color: pink;">My Heading</h3>
+
+- 'Style Tag' is also a bad idea, -on the other hand generally used for quick demonstrations and checks- coz it's also included in the HTML file but as a seperate part on top in 'head' part; which is mainly allows us to write some CSS code inside this tag,
+	<style type="text/css">
+		.
+		.
+		.
+	</style>
+	PS: /* Comment in CSS */
+
+- So finally to write our CSS in a different file, we use <link> tag inside the HTML file. Hitting tab after typing 'link' will create a nicely prepared tag for us.,
+	<link rel="stylesheet" type="text/css" href="CSSFileName.css">
+	PS: It must be included in the 'head' section! 

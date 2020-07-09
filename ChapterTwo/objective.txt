@@ -1,0 +1,5 @@
+1 - Define the 'General Rule' of CSS
+2 - Correctly include CSS is HTML files
+3 - Select elements by tag name, class and ID
+4 - Style elements with basic properties like color and background
+5 - Use Chrome CSS Inpector to debug HTML and CSS
