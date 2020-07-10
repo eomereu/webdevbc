@@ -1,0 +1,15 @@
+body {
+	background-color: aquamarine;
+}
+
+li {
+	border: 1px dashed rgba(200,10,100,.3);
+}
+
+#special {
+	background-color: moccasin; 
+}
+
+.done {
+	text-decoration: line-through;
+}

@@ -50,7 +50,7 @@ CSS (Cascading Style Sheets)
 	rgba(100,82,12,.3): More transparency (as getting closer to 0)
 
 - Background Property Usage:
-	background: color: rgb(255,255,255); /* full color */
+	background: rgb(255,255,255); /* full color */
 	background: url(https://badasshelmetstore.com/wp-content/uploads/2016/10/avengers-helmets.jpg); /* image */
 	Alone this will replicate the image all along the page so be careful to pick a continous one if using this.
 
@@ -67,6 +67,43 @@ CSS (Cascading Style Sheets)
 	border-width: 3px;
 	border-style: solid;
 	border-color: white;
-
 	But we use the following in terms of being practical:
 	border: 3px solid white; /* widht style color respectively */
+
+CSS Selectors:
+1.Element
+2.ID
+3.Class
+
+1.Element Selector:
+	Selects all instances of a given element.
+	div {
+		background: aquamarine;
+	}
+
+2.ID
+	Selects an element with a given ID. IDs have to be unique! It's not possible to have multiple instances with the same ID! We use hashtag '#' while referring to IDs.
+	<p id="mytext">Hallo!</p>
+	-------------------------
+	#mytext {
+		background-color: yellow;
+	}
+
+3.Class
+	Selects all elements with the given class. We use dot '.' while referring to classes.
+	<p class="important">Achtung!</p>
+	<p class="important">Das ist verboten!</p>
+	------------------------------------------
+	.important {
+		color: red;
+	}
+
+- To load the checkboxes as checked while loading the page, we add 'checked' ATR in the input tag of the checkbox,
+	<input type="checkbox" checked>
+	Fertig!
+
+- Google Chrome Inspect Element:
+	We can right click while on a webpage to inspect element. It will allow us to see both the HTML and the CSS part of it. So we can use this feature both for testing and trying things easily while creating some things and for inspecting stylings of other webpages and replicating them.
+	If we right click on a specific element and then click on inspect element it will directly show us that specific element within the opened up code segment.
+	Here on the right side, 'Styles' tab will consist the CSS stylings! We can directly on and off things or manipulate things here and watch the changes.
+	On the left side we can click on 'Magnifier' icon to go to sources of some things on the page by then clicking on'em. 
