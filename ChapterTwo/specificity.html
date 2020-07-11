@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Specificity</title>
+	<style type="text/css">
+		body {
+			color: red;
+		}
+		ul {
+			color: blue;
+		}
+		li{
+			color: green;
+		}
+		.singular {
+			color: gold;
+		}
+		#special {
+			color: purple;
+		}
+	</style>
+</head>
+<body>
+
+<p>Personen:</p>
+
+<ul>
+	<li id="special" class="singular">ich</li>
+	<li class="singular">du</li>
+	<li class="singular">er/sie/es</li>
+	<li>wir</li>
+	<li>ihr</li>
+	<li>sie/Sie</li>
+</ul>
+
+</body>
+</html>

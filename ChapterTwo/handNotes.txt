@@ -152,3 +152,52 @@ More Selectors:
 	li:nth-of-type(odd){
 		background: purple;
 	}
+
+Inheritence & Specificity
+	'Inheritence' is the traditional thing that we know from almost all languages, when we specify,
+	body {
+		color: red;
+	}
+	Everything on the page, inherits this and turns into blue although we don't mark'em; if we want them to be styled differently we gotta write'em explicitly, like,
+	body {
+		color: red;
+	}
+	ul {
+		color: blue;
+	}
+	li:nth-of-type(3){
+		color: green;
+	}
+	And here 'Specifity' moves in. It is multiple stylings targeting one element; just like above body, ul and li targets the 3rd li(s) on the page. And in this war, the closest one (in terms of containing) -the most specific one in other words- wins this war.
+
+	At this point when we inspect element on a page and look at the styles, we will see that those defeated inherited styles are overlined! And these are showed from bottom to top as more general to more specific one.
+
+Specificity Order: From least to most,
+	1./*Type Selectors*/
+		li {
+
+		}
+
+		li a {
+
+		}
+
+		h4 + ul {
+
+		}
+	2./*Class, Attribute & Pseudo-Class Selectors*/
+		.hallo {
+
+		}
+		input[type="text"] {
+
+		}
+		a[href="http://www.google.com"] {
+
+		}
+		a:hover
+		input:checked
+	3./*ID Selectors*/
+		#hello {
+
+		}
