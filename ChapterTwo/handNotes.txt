@@ -107,3 +107,48 @@ CSS Selectors:
 	If we right click on a specific element and then click on inspect element it will directly show us that specific element within the opened up code segment.
 	Here on the right side, 'Styles' tab will consist the CSS stylings! We can directly on and off things or manipulate things here and watch the changes.
 	On the left side we can click on 'Magnifier' icon to go to sources of some things on the page by then clicking on'em. 
+
+More Selectors:
+	/*Element*/ -> Selects all elements of the defined type
+	li {
+
+	}
+
+	/*class*/ -> Selects all elements with the specified class
+	.hello {
+
+	}
+
+	/*id*/ -> Selects an element with a specific and unique ID
+	#name {
+
+	}
+
+	/*Star*/ -> Selects everything on a page
+	* {
+		border: 1px solid lightgrey;
+	}
+
+	/*Descendant Selector*/ -> Selects element(s) inside an element(s)
+	ul li a {
+		color: red;
+	}
+
+	/*Adjacent Selector*/ -> Selects an element after an element.
+	h4 + ul {
+		border: 4px solid red;
+	}
+
+	/*Attribute Selector*/ -> Selects all of that ATRs
+	a[href="http://www.google.com"] {
+		background: blue;
+	}
+
+	/*nth of type*/ -> Selects nth element of every odd/even number of that element
+	li:nth-of-type(3){
+		background: purple;
+	}
+
+	li:nth-of-type(odd){
+		background: purple;
+	}

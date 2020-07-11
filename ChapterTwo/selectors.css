@@ -1,0 +1,43 @@
+/*Element*/
+li {
+	text-shadow: 2px 2px 4px grey;
+}
+
+/*class*/
+.carrots {
+	text-decoration: red wavy underline;
+}
+
+/*id*/
+#bananas {
+	color: goldenrod;
+	text-shadow: 2px 2px 2px gold;
+}
+
+/*Star*/
+* {
+	border: 1px dashed burlywood;
+}
+
+/*Descendant Selector*/
+ul li a {
+	color: rgba(20,150,250,.8);
+}
+
+/*Adjacent Selector*/
+ul + ul {
+	background-color: lavender;
+}
+
+/*Attribute Selector*/
+a[href="http://www.google.com"] {
+	background-color: lightsalmon;
+}
+
+/*nth of type*/
+li:nth-of-type(3) {
+	background-color: paleturquoise;
+}
+li:nth-of-type(even) {
+	background-color: bisque;
+}
