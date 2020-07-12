@@ -40,3 +40,7 @@
 	p {
 		text-decoration: line-through;
 	}
+
+- fonts.google.com
+	Free fonts that Google provides us; for usage:
+	https://www.youtube.com/watch?v=Z3JR6mEWEEo&feature=youtu.be
