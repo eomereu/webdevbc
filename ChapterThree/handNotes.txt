@@ -44,3 +44,34 @@
 - fonts.google.com
 	Free fonts that Google provides us; for usage:
 	https://www.youtube.com/watch?v=Z3JR6mEWEEo&feature=youtu.be
+
+- Box Model
+	In a document, each element is represented as a rectangular box. In CSS, each of these rectangular boxes is described using the standart box model.
+	Each box has four edges:
+	1.margin edge: the space outside the box; kinda within the elements. Usages,
+		margin: 20px; /* Same space from all sides */
+		margin-top: 40px;
+		margin: TOP RIGHT BOTTOM LEFT; /* More specified space from any side */
+		margin: 0 auto 0 auto; /* Centers the element from left and right edges */
+		margin: 0 auto; /* Specifies top to 0 px & right to auto, so indirectly fully centering from right and left again */
+
+	2.border edge: the thickness of the border. Usages,
+		border: 2px solid blue;
+		border-width: 2px;
+		border-style: solid;
+		border-color: blue;
+
+	3.padding edge: the space between border and the content inside of it. Usages,
+		padding: 10px;
+		padding-left: 20px;
+
+	4.content edge: the text itself (width & hight). Usages,
+		width: 20px;
+		width: 60%;
+
+	The space on the right of the content comes from the number 4, which is content edge -width- but the space on the left comes from number 3, which is padding edge -padding-left-. On the other hand, padding has also right spacing, which means we have two adjustments for the right side of our content.
+
+	We can use a percentage on the width to make the website more dynamic and change itself depending on the body (window) size,
+	p {
+		width: 50%;
+	}

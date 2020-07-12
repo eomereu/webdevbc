@@ -1,0 +1,19 @@
+p {
+	/* CONTENT - WIDTH AND HEIGHT*/
+	width: 50%;
+	height: 50px;
+
+	/* Border */
+	border: 2px solid aquamarine;
+
+	/* PADDING */
+	/* padding: 10px; /* Space from TOP - LEFT - BOTTOM */
+	padding-left: 20px;
+
+	/* MARGIN */
+	/* margin: 100px; */
+	/* margin-top: 150px; */
+	/* margin: 20px 40px 20px 40px; /* TOP RIGHT BOTTOM LEFT (clock-wise starting from top) */
+	/* margin: 0 auto 0 auto;*/
+	margin: 0 auto;
+}
