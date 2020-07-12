@@ -1,0 +1,42 @@
+- /* font-family */
+	Decides the font type. Type name must be between quotes if it starts with numbers.
+	h1 {
+		font-family: Arial;
+	}
+
+- /* font-size */
+	Here 'em' is dynamically changing and multiplying the text that it belongs to, according to the one level outer text of the current text
+	body {
+		font-size: 16px;
+	}
+
+	h1 {
+		font-size: 2.0em;
+	}
+
+- /* font-weight */
+	Decides how bold/light text will be. Some of the font types let you use it with a range of 100-800 (not every value but every hundred value) other than normal, bold etc.
+	p {
+		font-weight: 800;
+	}
+	h2 {
+		font-weight: bold;
+	}
+
+- /* line-height */
+	Its value multiplies the default line spacing value which is determined by the font
+	p {
+		line-height: 2;
+	}
+
+- /* text-align */
+	Specifies the alignment
+	h1 {
+		text-align: center;
+	}
+
+- /* text-decoration */
+	Used to give text underline effect, linethrough effect etc.
+	p {
+		text-decoration: line-through;
+	}

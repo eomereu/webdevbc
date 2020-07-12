@@ -1,2 +1,3 @@
-ChapterOne - HTML
-ChapterTwo - CSS
+ChapterOne - Introduction to HTML & Intermediate HTML
+ChapterTwo - Introduction to CSS
+ChapterThree - Intermediate CSS

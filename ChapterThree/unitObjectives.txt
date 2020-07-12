@@ -1,0 +1,9 @@
+Main Objectives:
+1. Manipulate common font and text properties using CSS
+2. Include external fonts using Google Fonts
+3. Define and manipulate the four components of the Box Model
+
+Projects:
+1. Tic Tac Toe Board
+2. Image Gallery Portfolio Site
+3. Minimalist Blog Site
