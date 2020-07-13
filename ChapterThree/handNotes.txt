@@ -75,3 +75,7 @@
 	p {
 		width: 50%;
 	}
+
+- An element can have multiple classes at once,
+	<td class="vertical horizontal"></td>
+	So this td is in also vertical class and also horizontal class.
