@@ -79,3 +79,13 @@
 - An element can have multiple classes at once,
 	<td class="vertical horizontal"></td>
 	So this td is in also vertical class and also horizontal class.
+
+- Normally each div and div-like elements go on different lines, that's because what's defined as default as float property. If we change it as the following, all divs will float from left to right to bottom:
+	div {
+		float: left
+	}
+	When we don't modify floar property, by default HTML has one space between adjacent images; but when we modify it, that's gone.
+
+- To go to end and the beginning of a line in Sublime with "Alt+Right"/"Alt+Left"; paste the following into the Key Bindings within Preferences:
+	{ "keys": ["alt+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	{ "keys": ["alt+right"], "command": "move_to", "args": {"to": "eol", "extend": false} }

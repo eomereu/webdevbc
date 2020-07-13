@@ -1,0 +1,30 @@
+body {
+	font-family: 'Merienda One', cursive;
+	font-size: 30px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 1.8em;
+}
+
+p {
+	width: 30%;
+	border-bottom: 2px solid #F1F1F1;
+	font-family: 'Raleway', sans-serif;
+	margin-left: 1.66%;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 23px;
+	padding-bottom: 1.66%;
+}
+
+img {
+	float: left;
+	width: 30%;
+	margin: 1.66%;
+	/* --- Above what we actually did is, we set the width of a single image to 30% of the body
+	which means there can be 3 pictures on a line whatever the window size is. So there is a 10%
+	left for us to decide margin spaces. 3 Pictures has a total of 6 margins from left and right
+	sides so 10/6=~1.66 our margin percentage --- */
+}
