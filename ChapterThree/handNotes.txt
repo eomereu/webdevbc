@@ -89,3 +89,15 @@
 - To go to end and the beginning of a line in Sublime with "Alt+Right"/"Alt+Left"; paste the following into the Key Bindings within Preferences:
 	{ "keys": ["alt+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },
 	{ "keys": ["alt+right"], "command": "move_to", "args": {"to": "eol", "extend": false} }
+
+- It may be more beneficial to have just one h1 -which is the main and the only one- on the page and having the other headings -which are multiple- as h2.
+
+- 'rem' adjusts the text size not according to the size of the parent element like 'em' but according to the root element; which means we don't have to worry about one changing the other,
+	letter-spacing: 0.2rem;
+	Letter spacing -btw- specifies the space between letters
+
+- 'max-width' specifies the max width to be shown as window shrinkes. It makes sense to use it with a percentage width.
+	max-width: 800px;
+	width: 80%;
+
+- <hr> tag adds a horizontal line on the page. No closing tags etc.
