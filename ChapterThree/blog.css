@@ -1,0 +1,32 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	border: 20px solid #bdc3c7;
+	margin: 20px 20%;
+}
+
+h1 {
+	color: #2c3e50;
+}
+
+div {
+	border-top: 1px solid lightgray;
+	margin: 0 25px; /* <-- Percentage is also an option --- */	
+}
+
+h1 + p {
+	border-left: 5px solid #bdc3c7;
+	padding-left: 5px; /* <-- Percentage is also an option --- */	
+	font-weight: bold; /* <-- Added on purpose --- */	
+}
+
+.date {
+	letter-spacing: 3px;
+	color: #3498db;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+#firstdiv {
+	border-width: 0px;
+}
