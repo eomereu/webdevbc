@@ -84,7 +84,7 @@
 	div {
 		float: left
 	}
-	When we don't modify floar property, by default HTML has one space between adjacent images; but when we modify it, that's gone.
+	When we don't modify float property, by default HTML has one space between adjacent images; but when we modify it, that's gone.
 
 - To go to end and the beginning of a line in Sublime with "Alt+Right"/"Alt+Left"; paste the following into the Key Bindings within Preferences:
 	{ "keys": ["alt+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },

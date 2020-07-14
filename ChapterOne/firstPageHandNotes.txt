@@ -105,8 +105,8 @@ The "placeholder" atr is the default text inside a box
 
 - Radio Boxes:
 	Regarding radio boxes, actually we can select more than one in radio button but cannot unselect it so we have to arrange it manually to make exactly one choice, to do this we give the choices the same "name"!, but here we must also specify the "value" of the choice for a better info sending and a better query; Used in things like gender selection etc. (Don't forget to add Labels)
-	<input for="male" name="gender" type="radio" value="male">
-	<input for="female" name="gender" type="radio" value="female">
+	<input id="male" name="gender" type="radio" value="male">
+	<input id="female" name="gender" type="radio" value="female">
 
 - <input type="checkbox">
 	A checkbox is the box which we can make a tick or not like selecting our skills, multiple or none
