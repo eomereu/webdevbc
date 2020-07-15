@@ -20,3 +20,30 @@ Bootstrap:
 			background-color: blue;
 		}
 	</style>
+
+- Jumbotron
+	Jumbotron is the big header like thing with an explanation and a button. It takes the 100% of the contain that it is inside of,
+		https://getbootstrap.com/docs/3.3/components/#jumbotron
+		https://getbootstrap.com/docs/4.5/components/jumbotron/
+
+- Grid System
+	To handle the kinda problematic thing above in other words to put some things to the center of the webpage or make it just 1/3 of the page etc. we normally use 'Grid System'. But for a basic solution we can also use the following 'container' class to handle it:
+
+- Container
+	A container is a predefined class in Bootstrap that used with 'div' tags. It automatically creates a container with predefined useful margines and width etc.
+
+- Forms
+	The advancedly modified version of the form we have seen back in ChapterOne:
+		https://getbootstrap.com/docs/3.3/css/#forms
+	
+	.form-group | div
+		A label-input pair is better used within "form-group" class to group'em together and add some spacing from the rest.
+	
+	.form-control | input
+		Specifies the style of the input box and its effect when selected.
+	
+	.form-inline | form
+		The class that used with the 'form' tag in order to make the form inline.
+
+	.checkbox | div
+		When we put label-input(checkbox) pair together inside this div class, the label there turns into a clickable text which is awesome
