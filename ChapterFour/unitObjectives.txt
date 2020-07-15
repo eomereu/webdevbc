@@ -1,0 +1,9 @@
+Bootstrap
+1. Define Bootstrap and explain why we use it.
+2. Include Bootstrap locally and by using a CDN
+3. Use common Bootstrap components like 'navs' & 'buttons'
+4. Build a layout using the Bootstrap grid system
+
+Projects:
+1. Portfolio Site
+2. Startup Landing Page
