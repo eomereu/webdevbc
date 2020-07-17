@@ -100,3 +100,37 @@ Bootstrap:
 
 - The right side menu tags of the navbar,
 		<ul class="nav navbar-nav navbar-right"></ul>
+
+The Grid System
+	Maybe it's the main reason that people prefer using bootstrap! As I shrink the window, apart from the content being scaled, it adapts into mobile or tablet mode easily and visually looking awesome,
+		https://getbootstrap.com/docs/3.3/css/#grid
+		https://getbootstrap.com/docs/4.5/layout/grid/
+	
+- It scales up to 12 columns. Anytime we use the grid, we must include it into a container! It consists of row and column divs. And so an example usage of grid system is as following,
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 blue">COL LG 6</div>
+				<div class="col-lg-6 blue">COL LG 6</div>
+			</div>
+		</div>
+
+- There are 4 sizes to be used in the Grid System:
+		1. xs: For mobile size
+		2. sm: For tablet size
+		3. md: For small screens or windows (laptop,PC)
+		4. lg: For big screens and windows
+			We can specify portions for each of these sizes.
+
+- If we don't specify the lg size explicitly, it will take it form the md element,
+		<div class="col-md-3 col-sm-6 blue">TOUR DATE!</div>
+		<div class="col-md-3 col-sm-6 blue">TOUR DATE!</div>
+		<div class="col-md-3 col-sm-6 blue">TOUR DATE!</div>
+		<div class="col-md-3 col-sm-6 blue">TOUR DATE!</div>
+			So here when it's lg size, 4 of them will be on the same line as in md; when it's sm size they will get seperated 2 by 2; and finally when it's xs they will go 1 by 1 because we didn't specify it and when we don't specify a smaller size or any size, it will take full 12 columns which means 1 element at 1 line.
+
+- Btw above the number coming after the size specifies how many columns the element will be on,
+		<div class="col-lg-6 blue">COL LG 6</div>
+		<div class="col-lg-6 blue">COL LG 6</div>
+			Here it will be on 6 columns, which means there will be 2 of'em on the line when the size is lg
+
+- We can make nested grids.
