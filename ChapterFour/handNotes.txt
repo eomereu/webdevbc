@@ -134,3 +134,35 @@ The Grid System
 			Here it will be on 6 columns, which means there will be 2 of'em on the line when the size is lg
 
 - We can make nested grids.
+
+- <nav class="navbar navbar-inverse"></nav>
+		Gives us a reversed navbar (with a deep background and light text by default)
+
+- <div class="thumbnail"></div>
+		Creates a standart box around the element inside of it which is generally an image. If we don't use it around an image even in a grid, image won't fit proplerly and will go as its size!
+
+- Ctrl + D
+		Selects all the instances of a selected text one by one on each push within Sublime Text 3, which will implicitly duplicate the cursor. It's better to choose the text from beginning to end by letting the cursor be at the end not at on the front!
+
+- If we want to get rid of the changing size images -especially hight; because when we apply thumbnail width is fixed but hight is not- then we can see the code here,
+		https://codepen.io/nax3t/pen/MJwpdb
+
+- To solve the white space bug along the image places,
+		This bug can be fixed by adding a class to the div with class of row, name it flex, then make a css rule like so:
+			.flex {
+			  display: flex;
+			  flex-wrap: wrap;
+			}
+
+- Glyphicons,
+		https://getbootstrap.com/docs/3.3/components/
+		No Glyphicons in Bootstrap 4,
+			https://www.glyphicons.com/
+			https://primer.style/octicons/
+		Also a nice alternative, for both 3 and 4,
+			https://fontawesome.com/
+
+- To make the navbar fixed on the top while scrolling down, just add class,
+		navbar-fixed-top
+	After making this we will realize that our content stayed behind it which means on the top we need padding, so we will give our body 70px top padding which is the hight of the navbar by default,
+		padding-top: 70px;
