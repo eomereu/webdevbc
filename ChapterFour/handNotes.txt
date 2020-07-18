@@ -162,7 +162,13 @@ The Grid System
 		Also a nice alternative, for both 3 and 4,
 			https://fontawesome.com/
 
+- Glyphicons has the feature of text in terms of colors; so color ATR will change its color directly and so the font-size will change its size.
+
 - To make the navbar fixed on the top while scrolling down, just add class,
 		navbar-fixed-top
 	After making this we will realize that our content stayed behind it which means on the top we need padding, so we will give our body 70px top padding which is the hight of the navbar by default,
 		padding-top: 70px;
+
+- It is important that we include our own style file after the line we include bootstrap, otherwise we cannot overwrite them!
+
+- When we try to overwrite styles of elements and are not able to do, it is always the best solution to go the page and checking the most specific ATR that effects the element we want to change by 'inspecting element'
