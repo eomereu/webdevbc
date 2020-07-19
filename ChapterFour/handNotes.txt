@@ -172,3 +172,19 @@ The Grid System
 - It is important that we include our own style file after the line we include bootstrap, otherwise we cannot overwrite them!
 
 - When we try to overwrite styles of elements and are not able to do, it is always the best solution to go the page and checking the most specific ATR that effects the element we want to change by 'inspecting element'
+
+- In Navbars
+	Div class 'container' strecthes the bar all along the screen but keeps the content in the container,
+		<nav class="navbar navbar-default">
+	  	<div class="container">
+	  	</div>
+	  </nav>
+	But div class 'container-fluid' keeps both the content and the bar in the container, which is the default actually,
+		<nav class="navbar navbar-default">
+	  	<div class="container-fluid">
+	  	</div>
+	  </nav>
+
+- background-image: url();
+	background-size: cover;
+	background-position:center;
