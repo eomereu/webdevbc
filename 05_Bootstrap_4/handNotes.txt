@@ -1,0 +1,24 @@
+Releases:
+	1. 'Alpha Release' is the first release and it basically tells that the current suftware is potentially very buggy and very likely to change mostly.
+	2. 'Beta Release' is a more stable version and likely to be changed again with breaking changes just like in Alpha.
+	3. 'Stable Release' is the done enough and ready to publish version.
+
+- The documentation that cover all the changes from Bootstrap 3 to 4:
+		https://getbootstrap.com/docs/4.5/migration/
+
+- Main changes,
+	1. Flexbox is added and on by default,
+	2. As primary unit 'rem' is selected over 'px'
+	3. Global size is switched from 14px to 16px
+	4. In the grid system '-xl' option is added
+	5. 'Panels, thumbnails & wells' are changed with 'cards'
+	6. No more 'Glyphicons' insted we can use 'Fontawesome'
+	And more more changes... 
+
+- While including scripts: It is essential to put them in the following order at the end of the body,
+		1. jQuery
+		2. Popper.js
+		3. Bootstrap JS
+
+- The pre-prepared Starter-Template,
+		https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template
