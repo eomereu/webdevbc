@@ -30,3 +30,23 @@ Releases:
 	Text Colors,
 		https://getbootstrap.com/docs/4.5/utilities/colors/
 	Colors are brighter now in Bootstrap 4 than 3 and also it has bg-color, bg-light etc.
+
+Typography between Bootstrap 3 and 4:
+	https://getbootstrap.com/docs/4.5/content/typography/
+	At this point there is a class type for heading called as 'display heading',
+		https://getbootstrap.com/docs/4.5/content/typography/#display-headings
+	Blockquotes,
+		https://getbootstrap.com/docs/4.5/content/typography/#blockquotes
+		<blockquote class="blockquote">
+			<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+		</blockquote>
+		If we don't want the styling here we simply don't include the class="quote" part. Here class="mb-0" just sets the margin bottom of the paragraph to 0. And if we want the blockquote to be aligned right, we can add class "text-right" to the blockquote. But back in Bootstrap 3 there was a class called as "blockquote-reverse" for this mission,
+			<blockquote class="blockquote text-right">
+		Citation,
+			<blockquote class="blockquote">
+				<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+			</blockquote>
+		title attribute usually refers to the title of a work you are citing not the author
+
+- It is now enough to change the default font size to make every text on the page to change dynamically. That's because they set the main unit size as rems not as pxs like back in Bootstrap 3.
