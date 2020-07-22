@@ -22,3 +22,11 @@ Releases:
 
 - The pre-prepared Starter-Template,
 		https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template
+
+- Colors,
+		https://getbootstrap.com/docs/4.5/getting-started/theming/#color
+		https://getbootstrap.com/docs/4.5/getting-started/theming/#theme-colors
+		https://getbootstrap.com/docs/4.5/utilities/colors/#background-color
+	Text Colors,
+		https://getbootstrap.com/docs/4.5/utilities/colors/
+	Colors are brighter now in Bootstrap 4 than 3 and also it has bg-color, bg-light etc.
