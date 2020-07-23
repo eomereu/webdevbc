@@ -50,3 +50,9 @@ Typography between Bootstrap 3 and 4:
 		title attribute usually refers to the title of a work you are citing not the author
 
 - It is now enough to change the default font size to make every text on the page to change dynamically. That's because they set the main unit size as rems not as pxs like back in Bootstrap 3.
+
+Some features that didn't exist in Bootstrap 3 at all,
+  Borders, (Bordered, Rounded, Left Blank)
+    https://getbootstrap.com/docs/4.5/utilities/borders/
+  Spacing, (m & p   t/b/l/r/x/y - 0/1/2/3/4/5/auto)
+    https://getbootstrap.com/docs/4.5/utilities/spacing/
