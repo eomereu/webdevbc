@@ -69,4 +69,11 @@ Some features that didn't exist in Bootstrap 3 at all,
       md - Tablets
       lg - Laptop Computers
       xl - Desktop Computers
-    
+
+Navbars:
+  https://getbootstrap.com/docs/4.5/components/navbar/
+  - We now have to specify the time of collapse of the menu (hamburger menu) in terms of breakpoints (sm-md...)
+  - Also the ".bg-*" class is required in Bootstrap 4
+  - "navbar-default" is changed to either "navbar-light" or "navbar-dark"
+  - If I just change the navbar to "navbar dark", just the text will be changed to white, in order to do it in real means, I also need to change the background to "bg-dark" Here I have the built-in options that I used before both at "text" and "btn" which are "info-warning-success-primary-secondary-danger"
+  - "navbar-expand-{breakpoint}" specifies the size that the navbar will be extended
