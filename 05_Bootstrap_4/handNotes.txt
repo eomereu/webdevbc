@@ -52,7 +52,21 @@ Typography between Bootstrap 3 and 4:
 - It is now enough to change the default font size to make every text on the page to change dynamically. That's because they set the main unit size as rems not as pxs like back in Bootstrap 3.
 
 Some features that didn't exist in Bootstrap 3 at all,
-  Borders, (Bordered, Rounded, Left Blank)
+  Borders, (Bordered, Rounded, Left Blank, Color)
+    border | rounded | rounded-top | border-left-0 | border-success
     https://getbootstrap.com/docs/4.5/utilities/borders/
   Spacing, (m & p   t/b/l/r/x/y - 0/1/2/3/4/5/auto)
+    p-x-3 -> make padding size-3 from both sides
     https://getbootstrap.com/docs/4.5/utilities/spacing/
+  Responsive Breakpoints, (responsive version of spacing for devices)
+    p-md-5 -> start making padding 5 starting from size m up to xl
+      PS: We don't specify the xs size explicitly, we use default to specify that size and we use the other sizes to move on like by specifying sm and furthermore...
+    https://getbootstrap.com/docs/4.5/utilities/spacing/#notation
+    Breakpoints,
+      https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints
+      xs - Portrait Mode Smartphones
+      sm - Landcape Mode Smartphones
+      md - Tablets
+      lg - Laptop Computers
+      xl - Desktop Computers
+    
