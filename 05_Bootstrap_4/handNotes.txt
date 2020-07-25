@@ -77,3 +77,13 @@ Navbars:
   - "navbar-default" is changed to either "navbar-light" or "navbar-dark"
   - If I just change the navbar to "navbar dark", just the text will be changed to white, in order to do it in real means, I also need to change the background to "bg-dark" Here I have the built-in options that I used before both at "text" and "btn" which are "info-warning-success-primary-secondary-danger"
   - "navbar-expand-{breakpoint}" specifies the size that the navbar will be extended
+
+- When we type i.e. "Lorem60" and hit Tab, it will give us 60 words long paragraph.
+
+Display:
+  - Instead of "visible" and "hidden" in Bootstrap 3, we now have ".d" class,
+  d-{value} for xs
+  d-{breakpoint}-{value}
+  <h1 class="d-none d-lg-block d-xl-none">Always hidden except LG</h1>,
+    means, display none starting -including- from the breakpoint "xs" -not explicit because we don't use the breakpoint name explicitly when it's xs- and when came to XL then display as block.
+
