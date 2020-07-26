@@ -70,8 +70,7 @@ Some features that didn't exist in Bootstrap 3 at all,
       lg - Laptop Computers
       xl - Desktop Computers
 
-Navbars:
-  https://getbootstrap.com/docs/4.5/components/navbar/
+Navbars: (https://getbootstrap.com/docs/4.5/components/navbar/)
   - We now have to specify the time of collapse of the menu (hamburger menu) in terms of breakpoints (sm-md...)
   - Also the ".bg-*" class is required in Bootstrap 4
   - "navbar-default" is changed to either "navbar-light" or "navbar-dark"
@@ -80,10 +79,43 @@ Navbars:
 
 - When we type i.e. "Lorem60" and hit Tab, it will give us 60 words long paragraph.
 
-Display:
+Display: (https://getbootstrap.com/docs/4.5/utilities/display/)
   - Instead of "visible" and "hidden" in Bootstrap 3, we now have ".d" class,
   d-{value} for xs
   d-{breakpoint}-{value}
   <h1 class="d-none d-lg-block d-xl-none">Always hidden except LG</h1>,
     means, display none starting -including- from the breakpoint "xs" -not explicit because we don't use the breakpoint name explicitly when it's xs- and when came to XL then display as block.
 
+- Typing i.e.
+    button.btn.btn-info.btn-lg
+  creates the following,
+    <button class="btn btn-info btn-lg"></button>
+  But if we don't specify which tag it's gonna be like by not writing "button" at the beginning, then it will create a "div" tag no matter what the classes are. i.e.
+    .border.border-dark
+  creates,
+    <div class="border border-dark"></div>
+
+Flexbox (https://getbootstrap.com/docs/4.5/utilities/flex/)
+  - Flexbox includes a bunch of CSS properties to move things around the position elements inside of a container/page. Lots of Bootstrap 4 utilities have a usage with "flex". But actually flex is a world that exists outside of Bootstrap, by itself.
+  
+  - There are two directions in the Flexbox that we need to know about. The first, by default our "main axis" of our content, is from left to right as from "start" to "end". And also the "cross axis" is from top to bottom as from "start" to "end", by default.
+  
+  - There is a property in Bootstrap that lets us change how items are distributed accross the main axis. Also we can also change the direction of our flexbox which means letting it go from right to left or bottom to top where things go a bit crazy. So by default,
+    "Flex direction is left to right & top to bottom."
+  
+  - "justify-content" property is the one that allows us to move the items and the default value is, - "justify-content-start" which -by default again- puts everything to the left. In this case if I say,
+  - "justify-content-end" it will push the elements to the right. Furthermore,
+  - "justify-content-center" centers the elements
+  - "justify-content-between" distributes all the elements evenly spaced accross the flexbox by sticking the edge elements to left and right. But,
+  - "justify-content-around" will distribute the elements evenly spaced again but this time also making a space at the edges.
+
+  - By default elements inside the flexbox are stretched from top to bottom. This happens because by default it is
+  - "align-items-stretch". But we can use following ones to change it and align items vertically,
+  - "align-items-start"
+  - "align-items-center"
+  - "align-items-end"
+  - "align-items-baseline"
+
+  Above we can also add Breakpoints -in other words, we can use them responsively-. Like,
+    justify-content-{breakpoint}-around
+    align-items-{breakpoint}-center
