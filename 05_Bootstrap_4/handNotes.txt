@@ -119,3 +119,13 @@ Flexbox (https://getbootstrap.com/docs/4.5/utilities/flex/)
   Above we can also add Breakpoints -in other words, we can use them responsively-. Like,
     justify-content-{breakpoint}-around
     align-items-{breakpoint}-center
+
+Flex Direction (https://getbootstrap.com/docs/4.5/utilities/flex/#direction):
+  - By default the direction ATR is "flex-row" which makes the direction left-to-right; if we change it to,
+    "flex-row-reverse" the direction will be changed to, right-to-left.
+
+  - If we add "flex-column" ATR; things will go from top to bottom as accepting the y-axis as the main axis. So if I use "justify-content" ATR with this ATR added, it will change the placement not on x-axis but on y-axis, which means vertically. One more thing; now "align-items" is effecting not the y-axis but x-axis as expected because with the "flex-column" ATR added we have changed the main-axis to y; and cross-axis to x so "align-items" will now be effecting our latest cross-axis which is x. Same rules apply to "flex-column-reverse" by the way.
+
+  - We can use direction with breakpoints,
+    "flex-md-column"
+    "flex-lg-row"
