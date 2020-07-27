@@ -129,3 +129,7 @@ Flex Direction (https://getbootstrap.com/docs/4.5/utilities/flex/#direction):
   - We can use direction with breakpoints,
     "flex-md-column"
     "flex-lg-row"
+
+Navs (https://getbootstrap.com/docs/4.5/components/navs/)
+  - "ul > li > a" structure is not enforced anymore. "nav > a" is enough 
+  - Navs are rewritten in Bootstrap 4 with Flex which means "d-flex" is included implicitly by default at the class at the beginning (rather "ul" or "nav"). So I can manipulate things by using Flex ATRs above.
