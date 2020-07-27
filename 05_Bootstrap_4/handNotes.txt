@@ -133,3 +133,13 @@ Flex Direction (https://getbootstrap.com/docs/4.5/utilities/flex/#direction):
 Navs (https://getbootstrap.com/docs/4.5/components/navs/)
   - "ul > li > a" structure is not enforced anymore. "nav > a" is enough 
   - Navs are rewritten in Bootstrap 4 with Flex which means "d-flex" is included implicitly by default at the class at the beginning (rather "ul" or "nav"). So I can manipulate things by using Flex ATRs above.
+
+The Grid System (https://getbootstrap.com/docs/4.5/layout/grid/)
+  - Flex is enabled!
+  - There are slight differences/similarities from/as the one back in Bootstrap 3:
+    1. Sizes are shifted back for 1 field which means xs went from ~768 to ~576 and the other shifted one back and now we have "xl" as an addititon
+    2. Of course we don't write "xs" here also explicitly (we had to back in BS3)
+    3. It must be in a "container" or a "conatiner-fluid" (which goes all the way on the screen), then we have "row" divs and under those we have "col" elements (divs,h1s etc.) as many as we wish.
+    4. Still 12 units
+    5. If I make it responsive (breakpoint based) things will be stacked at each other's top vertically at xs (!May need to be verified!)
+    6. If I don't specify the unit along the elements they will automatically share the space evenly. If I just give one a specific size so the rest will share the remaining space (units).
