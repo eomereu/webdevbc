@@ -143,3 +143,6 @@ The Grid System (https://getbootstrap.com/docs/4.5/layout/grid/)
     4. Still 12 units
     5. If I make it responsive (breakpoint based) things will be stacked at each other's top vertically at xs (!May need to be verified!)
     6. If I don't specify the unit along the elements they will automatically share the space evenly. If I just give one a specific size so the rest will share the remaining space (units).
+
+- background: url("imgs/header.jpeg") center center / cover no-repeat;
+    The line above, is a short version of those long ATRs, it centers the image and makes it cover and sets to no repeat.
