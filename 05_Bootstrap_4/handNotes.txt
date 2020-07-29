@@ -153,3 +153,8 @@ Cards (https://getbootstrap.com/docs/4.5/components/card/)
 - section > container > row > col > card
 
 - "btn-outline" is a nice looking button (like button etc.)
+
+- If I want specific items to be aligned specifically within a flexbox, I can use,
+    "align-self-{start/end/center}"
+  Also I can use it with breakpoints,
+    "align-self-{breakpoint}-{start/end/center}"
