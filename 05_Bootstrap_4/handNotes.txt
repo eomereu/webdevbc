@@ -162,3 +162,7 @@ Cards (https://getbootstrap.com/docs/4.5/components/card/)
 - "navbar-expand-md" Extends the Navbar at MD, so at XS and SM it is collapsed
 
 - "fixed-top" fixes the navbar to the top as the page is scrolled
+
+- "img-fluid" makes the image responsive and dynamic especially when using it in a grid
+
+- "@media (max-width: 1050px) {}" changes the things inside of it at a specific size. Called as "Media Query"
