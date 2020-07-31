@@ -166,3 +166,6 @@ Cards (https://getbootstrap.com/docs/4.5/components/card/)
 - "img-fluid" makes the image responsive and dynamic especially when using it in a grid
 
 - "@media (max-width: 1050px) {}" changes the things inside of it at a specific size. Called as "Media Query"
+
+- class="order-{breakpoint}-1", gives that specific element an order,
+    class="order-md-2"
