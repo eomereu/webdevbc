@@ -169,3 +169,6 @@ Cards (https://getbootstrap.com/docs/4.5/components/card/)
 
 - class="order-{breakpoint}-1", gives that specific element an order,
     class="order-md-2"
+
+- "transition: background 500ms;"
+    When the background is changed, specifies its duration to change.

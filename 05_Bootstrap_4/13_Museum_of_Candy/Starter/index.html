@@ -42,7 +42,7 @@
       </div>
     </nav>
 
-    <!-- Main Container -->
+    <!-- Heading Container -->
     <section class="container-fluid px-0">
       <div class="row align-items-center">
         <div class="col-lg-6">
@@ -62,21 +62,53 @@
       </div><!-- First Row -->
     </section>
     
+    <!-- Content Container -->
     <section class="container-fluid px-0">
-      <div class="row align-items-center">
+      <!-- 1st Row of Content-->
+      <div class="row align-items-center content">
         <div class="col-md-6 order-2 order-md-1 px-0">
           <img class="img-fluid" src="imgs/milk.png" alt="">
         </div>
-        <div class="col-md-6 text-center order-1 order-md-2 textPart">
+        <div class="col-md-6 text-center order-1 order-md-2 textPart my-5 my-md-0">
           <div class="row justify-content-center">
             <div class="col-10 col-lg-8">
               <h2>MUSEUM OF CANDY</h2>
               <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
               <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate asperiores tempore iusto numquam vitae quisquam atque aspernatur expedita repellendus ducimus non cumque laudantium, in perferendis nam officiis, aliquam, nihil quam?</p>
-            </div>
-          </div>
+            </div><!-- Inner Column with Text -->
+          </div><!-- Inner Row of the Right Column -->
+        </div><!-- Right Column Div -->
+      </div><!-- End Of 1st Row of Content -->
+      <!-- 2nd Row of Content-->
+      <div class="row align-items-center content">
+        <div class="col-md-6 text-center textPart my-5 my-md-0">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8">
+              <h2>MUSEUM OF CANDY</h2>
+              <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate asperiores tempore iusto numquam vitae quisquam atque aspernatur expedita repellendus ducimus non cumque laudantium, in perferendis nam officiis, aliquam, nihil quam?</p>
+            </div><!-- Inner Column with Text -->
+          </div><!-- Inner Row of the Left Column -->
+        </div><!-- Left Column Div -->
+        <div class="col-md-6 px-0">
+          <img class="img-fluid" src="imgs/gumball.png" alt="">
         </div>
-      </div>
+      </div><!-- End Of 2nd Row of Content -->
+      <!-- 3rd Row of Content-->
+      <div class="row align-items-center content">
+        <div class="col-md-6 order-2 order-md-1 px-0">
+          <img class="img-fluid" src="imgs/sprinkles.png" alt="">
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2 textPart my-5 my-md-0">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8">
+              <h2>MUSEUM OF CANDY</h2>
+              <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate asperiores tempore iusto numquam vitae quisquam atque aspernatur expedita repellendus ducimus non cumque laudantium, in perferendis nam officiis, aliquam, nihil quam?</p>
+            </div><!-- Inner Column with Text -->
+          </div><!-- Inner Row of the Right Column -->
+        </div><!-- Right Column Div -->
+      </div><!-- End Of 3rd Row of Content -->
     </section>
     
     <!-- Optional JavaScript -->
@@ -84,5 +116,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Script for Scrolling Effect -->
+    <script>
+      $(function () {
+        $(document).scroll(function() {
+          var $nav = $("#mainNavbar");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        })
+      })
+    </script>
   </body>
 </html>
