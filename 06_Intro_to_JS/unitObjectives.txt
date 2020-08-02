@@ -1,0 +1,4 @@
+1. Evaluate JS using the developer console
+2. List the 5 JS primitives
+3. Define variables with the "var" keyword
+4. Write code using console.log, alert and prompt
