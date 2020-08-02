@@ -22,44 +22,45 @@
       "ali"[1] //a
     Ex: "ali\\".length //equals 4 because one of the backslashes is the escape character! And so won't even be showwing up in the original string.
 
-- JS has dynamic typing which means we can change the variable types from one to another with just reassigning, it doesn't require any additional steps
-
 - Three types of naming the variables:
   1. camelCase: capital letter is in lowercase but the capital letter of every following word is in upper case
   2. snake_case: all in lowercase but there is an underscore between every word
   3. kebab-case (dash-case): all in lowercase but there is a dash between every word
     "camelCase" is used in JS
 
-- To store variables in JS, we use "var", "let" or "const" keywords,
-  1. var
-    - var is scoped to "current execution context" AKA a variable's enclosing function or the global scope
-    - can be reassigned whenever wanted
-    - initializing value is optional
-    - can be redeclared at any point (its datatype can be changed)
-    - global variables are added to window
-    Examples:
-      var name = "Omer";
-        name + "Erol" = "OmerErol"
-        name = 99; //reassigning the variable with a different type
-          2 + name = 101
-      var myNum = 52;
-        8 + myNum = 60
-        myNum = 8; //reassigning the variable
-          8 + myNum = 16
-  2. let
-    - let is "block scoped"
-    - doesn't create property on global window object
-    - initializing value is optional
-    - can be reassigned
-    - cannot be redeclared in the same scope! (its datatype cannot be changed)
-  3. const
-    - const is also "block scoped"
-    - not immutable, but variable reference cannot change
-    - cannot be reassigned!
-    - must be initialized with value!
-    - doesn't create property on global window object
-    - cannot be redeclared in the same scope (its datatype cannot be changed)
-    - its value cannot be changed but if it's a list or sth its content can be updated but its reference cannot be
+Defining Variables in JS
+  - JS has dynamic typing which means we can change the variable types from one to another with just reassigning, it doesn't require any additional steps
+
+  - To store variables in JS, we use "var", "let" or "const" keywords,
+    1. var
+      - var is scoped to "current execution context" AKA a variable's enclosing function or the global scope
+      - can be reassigned whenever wanted
+      - initializing value is optional
+      - can be redeclared at any point (its datatype can be changed)
+      - global variables are added to window
+      Examples:
+        var name = "Omer";
+          name + "Erol" = "OmerErol"
+          name = 99; //reassigning the variable with a different type
+            2 + name = 101
+        var myNum = 52;
+          8 + myNum = 60
+          myNum = 8; //reassigning the variable
+            8 + myNum = 16
+    2. let
+      - let is "block scoped"
+      - doesn't create property on global window object
+      - initializing value is optional
+      - can be reassigned
+      - cannot be redeclared in the same scope! (its datatype cannot be changed)
+    3. const
+      - const is also "block scoped"
+      - not immutable, but variable reference cannot change
+      - cannot be reassigned!
+      - must be initialized with value!
+      - doesn't create property on global window object
+      - cannot be redeclared in the same scope (its datatype cannot be changed)
+      - its value cannot be changed but if it's a list or sth its content can be updated but its reference cannot be
 
 - undefined: Variables that were declared but not initilalized which means when we create a variable and not initialize it, it's value becomes "undefined",
     var age;
@@ -67,3 +68,24 @@
 - null: null is 'explicitly (on purpose and willingly) nothing',
     var currentPlayer= "Charlie";
     currentPlayer = null; //game over
+
+Commenting in JS
+  1. one-line commenting It is done with double slashes,
+    //this is a one-line comment
+  2. multiple-line commenting: It is done with slash and stars,
+    /* this is a multiple
+    line comment! */
+
+- clear() function clears the console when used on the browser console.
+
+Built-in Methods in JS
+  1. alert: It pops up a message to the user, so it basically alerts the user,
+    alert("Congratulations!");
+    alert(52);
+    alert(192+8); //200
+  2. console.log: Prints something to the JS console so if someone doesn't have the console open, he naturally won't see this message,
+    console.log("this is my console!")
+    console.log(9/3) //3
+  3. prompt: It lets us get input fron the user,
+    prompt("Tell us your age please:")
+    var userName = prompt("Tell us your name please:");
