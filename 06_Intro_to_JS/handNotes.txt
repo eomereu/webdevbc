@@ -89,3 +89,7 @@ Built-in Methods in JS
   3. prompt: It lets us get input fron the user,
     prompt("Tell us your age please:")
     var userName = prompt("Tell us your name please:");
+
+- Some of scripts should go in the head, some of them in the body! If you put the script up top, it's going to run first.
+
+- After selecting a word, hitting "Ctrl + D" will select the next matching word with the selected one. So by repeating this all the repeatings of that word will be selected simultaneously so that we can easily change them at the same time.
