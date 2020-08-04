@@ -1,0 +1,4 @@
+1. Evaluate complex logical expressions
+2. Write 3-part JS conditional statements (if-else if-else)
+3. Write JS 'while' loops and 'for' loops
+4. Translate between 'while' and 'for' loops
