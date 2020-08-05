@@ -47,3 +47,6 @@ Conditionals
     else {
       console.log("Do whatever you want...")
     }
+
+- typeof myNumber
+    Gives us the type of the variable "myNumber"
