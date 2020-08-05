@@ -32,3 +32,18 @@ Logical Operators
     !!-1 //true
   - Falsy values:
     false, 0, "", null, undefined, NaN
+
+- propmt always returns a String! So in order to convert it into number,
+    var age = Number(prompt("What is your age?"));
+
+Conditionals
+  ex:
+    if(age < 18){
+      console.log("I'm sorry. You are not old enough to pass!")
+    }
+    else if(age < 21){
+      console.log("All right, pass but my eyes are on you!")
+    }
+    else {
+      console.log("Do whatever you want...")
+    }
