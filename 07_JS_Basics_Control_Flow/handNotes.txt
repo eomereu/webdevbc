@@ -50,3 +50,23 @@ Conditionals
 
 - typeof myNumber
     Gives us the type of the variable "myNumber"
+
+- DRY: Don't Repeat Yourself (x WET: Write Everything Twice)
+    We want to keep our code as DRY as possible.
+
+Loops
+  1. while
+    ex:
+      var count = 1;
+      while(count <= 10) {
+        console.log("count is: " + count);
+        count+=2;
+      }
+      When we evaluate the example above in chrome console, we will see that it also shows us number 11 which is not expected. But actually it's not printing it out it just shows us that as it is the lastly evaluated value but not printed out because at the last loop of the while count is updated to 11. And to point this out, console just pust a light-reverse-directed arrow to the beginning of the line.
+    ex:
+      var str = "hello";
+      var count = 0;
+      while(count < str.length) {
+        console.log(str[count]);
+        count++;
+      }
