@@ -77,3 +77,5 @@ Loops
     Gives me the index of first 'ali' occurs in the text.
 - str.indexOf("x");
     Gives me '-1' if x does not exist
+
+- for(init; condition; step) {}
