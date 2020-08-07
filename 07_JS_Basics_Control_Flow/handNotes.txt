@@ -70,3 +70,10 @@ Loops
         console.log(str[count]);
         count++;
       }
+
+- str.indexOf("a");
+    Gives me the index of first 'a' occurs in the text.
+- str.indexOf("ali");
+    Gives me the index of first 'ali' occurs in the text.
+- str.indexOf("x");
+    Gives me '-1' if x does not exist
