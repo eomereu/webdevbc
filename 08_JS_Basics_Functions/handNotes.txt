@@ -1,0 +1,12 @@
+- Functions let us wrap bits of code up into reusabel packages. They are one of the building blocks of JS,
+    //declaring:
+    funciton doSomething() {
+      console.log("Hello World!");
+    }
+    //calling:
+    doSomething();
+    If I just type the function name without parantheses and hit enter, console will give me function itself but not run it!
+      doSomething
+
+- clear()
+    Typing and hitting enter will clear the console
