@@ -1,12 +1,17 @@
 - Functions let us wrap bits of code up into reusabel packages. They are one of the building blocks of JS,
-    //declaring:
-    funciton doSomething() {
+    funciton doSomething() { //declaring:
       console.log("Hello World!");
     }
-    //calling:
-    doSomething();
+    doSomething(); //calling:
     If I just type the function name without parantheses and hit enter, console will give me function itself but not run it!
       doSomething
+    With arguments,
+      function area(height, width) {
+        console.log(height * width);
+      }
+      area(9, 8) //72
+
+- If I leave blank an argument whilce calling a function in JS, it will take it as undefined and not cause an error
 
 - clear()
     Typing and hitting enter will clear the console
