@@ -46,3 +46,7 @@ Different Syntaxes for Creating a Function
   3. The slight difference between the two is, when I assign something else to the variable at the 'Function Expression' then I lose my function as expected.
   4. In 'Function Expression' syntax, function names can be anonymous (can be left blank)
   5. More on these two  types: https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
+
+- return num % 2 === 0; Returns true if the num is even, false otherwise
+
+- str.replace(/-/g, "_"); Replaces all "-" to "_"
