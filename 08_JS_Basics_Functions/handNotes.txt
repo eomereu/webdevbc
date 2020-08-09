@@ -15,3 +15,34 @@
 
 - clear()
     Typing and hitting enter will clear the console
+
+- Every function in JS returns something and if we don't specify it explicitly it will simply return 'undefined'. That's the reason why we've been seeing 'undefined' consistently in the console while we were printing out console.log messages with functions
+
+- function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  var city = "wien"; //wien
+  var capital = capitalize(city); //Wien
+
+- str.charAt(index) Takes the character at 'index' of the string 'str'
+
+- str.toUpperCase() Takes the string 'str' (or a single char if given) and turns it into upper case
+
+- str.slice(2) Slices the string 'str' and takes the part starting (by including the given index) from the index till the end of the string
+
+- return Simply stops the execution of the function
+
+- if(typeof(str) === "number") {} Checks the type of str that if it's a number or not
+
+Different Syntaxes for Creating a Function
+  1. Function Declaration,
+      function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
+  2. Function Expression,
+      var capitalize = function(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
+  3. The slight difference between the two is, when I assign something else to the variable at the 'Function Expression' then I lose my function as expected.
+  4. In 'Function Expression' syntax, function names can be anonymous (can be left blank)
+  5. More on these two  types: https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
