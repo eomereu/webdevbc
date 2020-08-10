@@ -65,3 +65,15 @@ Scope
       num = 2;
     }
     console.log(num); //prints 2
+
+Higher Order Functions
+  1. Functions that take other functions as argument.
+  2. setInterval(anotherFunc, intervalMs): Takes another function and time as ms as arguments and repeats that function at every ms that was given. The reason why we don't use parantheses here while passing the function, we are passing the function itself as the source-code to the setInterval() function and lets it to call that code and execute that stuff by itself,
+    setInterval(sing, 1000);
+  3. As soon as we type and hit enter it returns us a number and then starts executing the code at given intervals. That number is the key for us to stop the interval. Let's say it was '2', so to stop the interval by the function 'clearInterval()' we type,
+    clearInterval(2);
+  4. We also can use an anonymous -not predefined- function within the setInterval() like,
+      setInterval(function(){
+        console.log("This is an anonymous function.")
+      }, 1000)
+  5. 1000 ms = 1 second
