@@ -50,3 +50,18 @@ Different Syntaxes for Creating a Function
 - return num % 2 === 0; Returns true if the num is even, false otherwise
 
 - str.replace(/-/g, "_"); Replaces all "-" to "_"
+
+Scope
+  - It is the context that code is executed in
+  ex:
+    var num = 1;
+    function nev() {
+      var num = 2;
+    }
+    console.log(num); //prints 1
+  ex:
+    var num = 1;
+    function nev() {
+      num = 2;
+    }
+    console.log(num); //prints 2
