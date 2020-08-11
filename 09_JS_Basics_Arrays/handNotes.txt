@@ -1,0 +1,29 @@
+- Ways of creating an array,
+  1. var friends = []; //common
+  2. var friends = new Array() //uncommon
+
+- Syntax of an array,
+    var friends = ["Emma", "John", "Betty", "Dave"];
+
+- Index numbers in JS starts from 0,
+    friends[0]; //"Emma"
+
+- We can directly change an element at an index by reassigning,
+    friends[1]; //"John"
+    friends[1] = "Johnny";
+    friends[1] //"Johnny"
+
+- We can add new data to an array,
+    friends[4] = "Julia";
+    friends; //["Emma", "John", "Betty", "Dave", "Julia"];
+
+- If we add the new data to a further place,
+    friends[7] = "Chuck";
+  Then JS will fill the indexes between with "undefined",
+    friends; //["Emma", "John", "Betty", "Dave", "Julia", undefined, undefined, "Chuck"];
+
+- Arrays can hold different types of data altogether. All individual items doesn't need to be of the same type,
+    var mixed = [1, "Anna", true, undefined, 52, "Türkei", null];
+
+- Length property will give us the length of the array just like strings,
+    friends.length //8
