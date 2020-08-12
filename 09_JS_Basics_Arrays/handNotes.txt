@@ -15,7 +15,7 @@
 
 - We can add new data to an array,
     friends[4] = "Julia";
-    friends; //["Emma", "John", "Betty", "Dave", "Julia"];
+    friends //["Emma", "John", "Betty", "Dave", "Julia"];
 
 - If we add the new data to a further place,
     friends[7] = "Chuck";
@@ -27,3 +27,42 @@
 
 - Length property will give us the length of the array just like strings,
     friends.length //8
+
+Built-in Array Methods (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#)
+  1. push/pop
+    We use 'push' to add item to the end of the array. It also returns the updated length of the array right away, it can be stored in a variable for further use,
+      var abc = ["a", "b"];
+      var.push("c") //3
+      abc //["a", "b", "c"]
+    We use 'pop' to remove the last item of the array. It also returns us that last element right away, it can be stored in a variable for further use,
+      abc.pop() //"c"
+      abc //["a", "b"]
+  2. unshift/shift
+    They are similar to 'push/pop' pair but just does the same thing at the beginning of the array.
+    So we use 'unshift' to add item to the beginning of the array, It also returns us the updated length of the array right away, it can be stored in a variable for further use,
+      var nums = [2, 3, 4];
+      var.unshift(1) //4
+      nums //[1, 2, 3, 4]
+    We use 'shift' to remove the first item of the array. It also returns us that first element right away, it can be stored in a variable for further use,
+      nums.shift() //1
+      nums //[2, 3, 4]
+  3. indexOf
+    It's used to find the index of the first occurence of an element in an array, it simply returns us that index and if the given element is not found within the array it returns '-1',
+      var myFriends = ["Ahmet", "Mehmet", "Hasan", "Ahmet"];
+      myFriends.indexOf("Mehmet"); //1
+      myFriends.indexOf("Ahmet"); //0 (not 3)
+      myFriends.indexOf("Hakan"); //-1
+  4. slice 
+    It's used to copy portions or all of the array,
+      var colors = ["blue", "red", "green", "yellow", "black"];
+      var myColors = colors.slice(1,3); //it copies the [1,3) elements, so first index is included but the second is not!
+      myColors //["red", "green"]
+      var colorsCopy = colors.slice(); //copies all elements
+      colorsCopy //["blue", "red", "green", "yellow", "black"];
+    PS: The original array is not manipulated, it stays the same
+  EX:
+    1. var numbers = [11, 22, 33, 44];
+       console.log(numbers[numbers.legth]) //prints undefined
+    2. var names = [ ["Ali", "Veli"], ["Ahmet", "Mehmet"], ["Hasan", "Hüseyin"] ];
+       console.log(names[1]) //["Ahmet", "Mehmet"]
+       console.log(names[2][0]) //"Hasan"
