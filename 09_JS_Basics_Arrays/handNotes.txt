@@ -81,3 +81,32 @@ Note by Lecturer,
   This is not something you would have to deal with in the real world as prompt, alert, and confirm functions are almost never used and when they are it's typically not on page load.
 
   You'll also learn jQuery in latter sections which has a cool $('document').ready()  function that you could use in place of the window.setTimeout workaround mentioned above.
+
+Array Iteration
+  1. Classical for loop,
+    var colors = ["rot", "grün", "gelb"];
+    for(var i = 0; i < colors.length; i++){
+      console.log(colors[i]);
+    }
+  2. .forEach loop,
+    arr.forEach(someFunction)
+    ex:
+      var colors = ["rot", "grün", "gelb"];
+      colors.forEach(function(color){
+        //color is a placeholder, it can be renamed as wished
+        console.log(color);
+      });
+    Here if we don't give an argument to the anonymous function inside, it will repeat the things inside the function as many times as the number of elements in the array. So in conclusion, that argument hold that specific item in the array in every iteration and gives us the chance to use it as we want. Lastly we can use either a pre-defined function  or an anonymous function.
+
+Note by Lecturer,
+  .forEach takes a callback function, that callback function is expected to have at least 1, but up to 3, arguments. This is how .forEach was designed.
+
+  The arguments are in a specific order:
+  - The first one represents each element in the array (per loop iteration) that .forEach was called on.
+  - The second represents the index of said element.
+  - The third represents the array that .forEach was called on (it will be the same for every iteration of the loop).
+  
+  ex:
+    [1,2,3].forEach(function(el, i, arr) {
+      console.log(el, i, arr);
+    });
