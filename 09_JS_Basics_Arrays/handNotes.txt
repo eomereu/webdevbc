@@ -105,8 +105,11 @@ Note by Lecturer,
   - The first one represents each element in the array (per loop iteration) that .forEach was called on.
   - The second represents the index of said element.
   - The third represents the array that .forEach was called on (it will be the same for every iteration of the loop).
-  
+
   ex:
     [1,2,3].forEach(function(el, i, arr) {
       console.log(el, i, arr);
     });
+
+  - Splice method is used to delete a specific item with the given index.
+    .splice(index, howManyItemsToDelete)
