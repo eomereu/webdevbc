@@ -113,3 +113,5 @@ Note by Lecturer,
 
   - Splice method is used to delete a specific item with the given index.
     .splice(index, howManyItemsToDelete)
+
+- Be careful when using .forEach because when we use return inside of it, we just return from the anonymous function not from the .forEach!
