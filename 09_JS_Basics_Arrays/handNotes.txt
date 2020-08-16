@@ -115,3 +115,14 @@ Note by Lecturer,
     .splice(index, howManyItemsToDelete)
 
 - Be careful when using .forEach because when we use return inside of it, we just return from the anonymous function not from the .forEach!
+
+- As soon as I call the function with parantheses at the end, then the function is executed, otherwise not.
+
+- To make myForEach function like arr.myForEach, we write,
+    Array.prototype.myForEach = function(func) {
+      //loop through the array
+      for(var i = 0; i < this.length; i++){
+        //call func for each item
+        func(this[i]);
+      }
+    }
