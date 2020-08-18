@@ -47,3 +47,35 @@
   var str = "name";
   someObject.str //doesn't look for "name"
   someObject[str] //does evaluate str and looks for "name"
+
+  - In some languages 'objects' are called as 'dictionaries' thanks to the key-value pairs.
+
+  - Actually arrays are a special type of objects that has the keys only as numbers.
+
+  - To add a new key-value pair to an object,
+    person.surname = "Odd";
+
+  - An array of object is like the following,
+    var posts = [
+      {
+        title: "Dogs are awesome",
+        author: "Ryan",
+        comments: ["Yeah I think so", "Nope!"]
+      },
+      {
+        title: "Cats are awesome",
+        author: "Bob",
+        comments: ["Not really", "Of course..."]
+      }
+    ]
+    posts[1].comments[0]; //"Not really"
+    var myObject = {
+      friends: [
+        {name: "Ali"},
+        {name: "Veli"},
+        {name: "Ahmet"}
+      ],
+      color: "blue",
+      isEvil: false
+    }
+    myObject.friends[0].name; //"Ali"
