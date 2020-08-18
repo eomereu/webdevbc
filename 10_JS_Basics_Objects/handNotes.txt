@@ -1,0 +1,49 @@
+- It consists of key-value pairs. They are not part of an ordering.
+
+- Objects can hold all sorts of data, nums, strings, arrays even other objects...
+
+- An object syntax seems like the following,
+  var person = {
+    name: "Cindy",
+    age: 32,
+    city: "Köln"
+  };
+
+- There are 3 ways of creating an object,
+  2. Create'em all at once, just like above,
+    var person = {
+      name: "Travis",
+      age: 22,
+      city: "Linz"
+    };
+  1. Make an empty object then add to it,
+    var person = {}
+    person.name = "Travis";
+    person.age = 22;
+    person.city = "Linz";
+  3. Make the empty object with a different notation,
+    var person = new.Object();
+    person.name = "Travis";
+    person.age = 22;
+    person.city = "Linz";
+
+- Updating the properties,
+  person["age"] += 1;
+  person.city = "Berlin";
+
+- To retrieve data from objects there are two ways:
+  1. person["name"] //bracket notation
+  2. person.name //dot notation
+
+- We cannot use dot notation if the property starts with a number,
+  someObject.1blah //INVALID
+  someObject["1blah"] //VALID
+
+- We cannot use dot notation if the property has spaces in its name,
+  someObject.blah blah //INVALID
+  someObject["blah blah"] //VALID
+
+- We can lookup using a variable with bracket notation,
+  var str = "name";
+  someObject.str //doesn't look for "name"
+  someObject[str] //does evaluate str and looks for "name"
