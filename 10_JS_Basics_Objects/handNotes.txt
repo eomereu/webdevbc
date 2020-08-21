@@ -106,3 +106,14 @@
     dogSpace.speak(); //"WOOF!"
     catSpace.speak(); //"MEOW!"
   This is used i.e. with delete functions for posts or comments or users in real world. They are both delete functions but refer to the different objects and do slightly different tasks.
+  This is also used in libraries. When we import a library, simply to use its methods we first refer to the library itself which is actually an object or in other words a namespace.
+
+- Keyword "this" is used within the methods actually,
+    var comments = {};
+    comments.data = ["Good job!", "Thanks", "Congrats."];
+    comments.print = function(){
+      this.data.forEach(function(el){ //here "this" refers to the "comments" object!
+        console.log(el);
+      });
+    };
+    comments.print(); //Good job! \n Thanks \n Congrats.
