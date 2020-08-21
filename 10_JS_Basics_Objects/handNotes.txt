@@ -79,3 +79,30 @@
       isEvil: false
     }
     myObject.friends[0].name; //"Ali"
+
+- We can add functions into the objects as well as properties and when we do it we call these functions as "methods" after this point,
+  var obj = {
+    name: "Mustafa",
+    age: 21,
+    isCool: false,
+    friends: ["merve", "osman"],
+    add: function(x,y){
+      return x+y;
+    }
+  }
+  To call methods,
+    obj.add(5,4);
+  It is just like "console.log()". "console" is an object and "log()" is a method inside of it
+
+- Both to avoid namespace collisions and keeping the code organized we can do sth. like following,
+    var dogSpace = {};
+    dogSpace.speak = function(){
+      return "WOOF!";
+    }
+    var catSpace = {};
+    catSpace.speak = function(){
+      return "MEOW!";
+    }
+    dogSpace.speak(); //"WOOF!"
+    catSpace.speak(); //"MEOW!"
+  This is used i.e. with delete functions for posts or comments or users in real world. They are both delete functions but refer to the different objects and do slightly different tasks.
