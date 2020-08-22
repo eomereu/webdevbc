@@ -30,3 +30,21 @@ See example below:
 - When I type 'document' to the console, it doesn't give us the objects as we explained above. To get them as we mentioned, we can type,
     console.dir(document)
   So actually this will show things to us like the code we used while handling objects...
+
+- We can summarize the process with two keywords: SELECT and MANIPULATE,
+    The following code changes the 'h1' on the page to pink,
+      // Select the 'h1' on the page and save it to a variable 
+      var h1 = document.querySelector("h1");
+      // Then change it to color pink
+      h1.style.color = "pink";
+    The following code blinks the body between blue and white every second,
+      var body = document.querySelector("body"); //SELECT
+      var isBlue = false;
+      setInterval(function(){ //MANIPULATE
+        if(isBlue){
+          body.style.background = "white";
+        } else {
+          else body.style.background = "blue";
+        }
+        isBlue = !isBlue;
+      }, 1000);
