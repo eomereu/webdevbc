@@ -48,3 +48,64 @@ See example below:
         }
         isBlue = !isBlue;
       }, 1000);
+
+Important DOM Selectors
+  1.document.URL
+    Returns the URL of the page
+  2.document.links
+    Returns all the links (all the anchor 'a href...' tags) that exist on the page
+  3.document.body
+    Returns all the body
+  4.document.head
+    Returns the head
+
+Methods
+The document comes with a bunch of methods for selecting elements. Here are 5 of them,
+  ---------------------------------------
+  <body>
+    <h1>Hello</h1>
+    <h1>Goodbye</h1>
+    <ul>
+      <li id="highlight">List Item 1</li>
+      <li class="bolded">List Item 2</li>
+      <li class="bolded">List Item 3</li>
+    </ul>
+  </body>
+  ---------------------------------------
+  1.document.getElementById("idOfTheElement")
+    Returns/Selects the specified element,
+      var tag = document.getElementById("idOfTheElement")
+      tag //<li id="highlight">List Item 1</li>
+
+  2.document.getElementsByClassName("className")
+    Returns/Selects all the elements with the given class name as a 'node list' which technically seems like an array. Even if there is a single element matching the tag name it will go into a node list,
+      var tags = document.getElementsByClassName("className")
+      tags //[<li class="bolded">List Item 2</li>, <li class="bolded">List Item 3</li>]
+    Regarding the differences between this (node list) and an array, we can use accessing (tags[2]) or length (tags.legth) properties with both of'em but we cannot use .forEach() loop on a node list.
+
+  3.document.getElementsByTagName("tagName")
+    Returns/Selects the items by the given tag name. Even if there is a single element matching the tag name it will go into a node list,
+      var tags = document.getElementsByTagName("h1")
+      tags //[<h1>Hello</h1>, <h1>Goodbye</h1>]
+
+  4.document.querySelector("key")
+    Returns the element that is specified by the selecting keyword. This method makes our work easier and lets us to select different things by just using a single method (itself). It is actually a CSS selector and works that way. On the other hand, if there is more than one element matching the class or tag key, it always just selects and returns the very first one as a single item!
+    If we specify it with a '#' then we mean the id,
+      var el = document.querySelector("#highlight")
+      el //<li id="highlight">List Item 1</li>
+    If we specify it with a '.' then we mean the class, and it selects the very first item of that class,
+      var el = document.querySelector(".bolded")
+      el //<li class="bolded">List Item 2</li>
+    If we don't specify the key, we mean the tag,
+      var el = document.querySelector("h1")
+      el //<h1>Hello</h1>
+    Furthermore, I can specify more complex key,
+      var el = document.querySelector("li a.special")
+
+  5.document.querySelectorAll("key")
+    Works with the same principle as querySelector() but the very only different is this method selects all the elements matching the key and stores in a node list,
+      var tags = document.querySelectorAll(".bolded")
+      tags //[<li class="bolded">List Item 2</li>, <li class="bolded">List Item 3</li>]
+    If there is a single element matching the key it will again store it in a node list,
+      var tags = document.querySelectorAll("#highlight")
+      tags //[<li id="highlight">List Item 1</li>]
