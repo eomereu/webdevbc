@@ -109,3 +109,6 @@ The document comes with a bunch of methods for selecting elements. Here are 5 of
     If there is a single element matching the key it will again store it in a node list,
       var tags = document.querySelectorAll("#highlight")
       tags //[<li id="highlight">List Item 1</li>]
+
+  PS: We can print the selected objects with the console method,
+    console.dir(obj);
