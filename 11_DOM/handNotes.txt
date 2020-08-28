@@ -112,3 +112,54 @@ The document comes with a bunch of methods for selecting elements. Here are 5 of
 
   PS: We can print the selected objects with the console method,
     console.dir(obj);
+
+Manipulating
+  1. style
+    The style property is one way to manipulate an element's style. The right side has to be a string, within the quotes,
+      var tag = document.getElementById("highlight");
+      tag.style.color = "blue";
+      tag.style.border = "10px solid red";
+      tag.style.fontSize = "70px";
+      tag.style.background = "yellow";
+      tag.style.marginTop = "200px";
+
+    If we try to change lots of properties for an object like above, we have to kepp the following concept called as "Seperation of Concepts" into consideration. It is recommended for styles to be defined in a seperate file or files. So it's better we use the style property for quick styling and testing purposes,
+      -----------------
+      |               |
+      | structure  ---|---------------
+      |   (html)   |  |              |
+      |  ----------|--|--- behavior  |
+      |  |         |  |  |   (js)    |
+      |  |         ---|--|------------
+      ---|-------------  |
+         | presentation  |
+         |     (css)     |
+         -----------------
+
+    So in terms of the schema above, instead of changing CSS elements by JS every time, we can turn them on and off inside of a CSS file which prevents us from DRY-Coding and preserves the principle schema above. We can create a class in the CSS file and then just changes the class of the wanted object to that class with JS and all the styling is again done but by preserving the principles and keeping the code clean,
+      // Selecting the element,
+      var tag = document.getElementById("highlight");
+      // Defining the class seperately in the CSS file,
+      .some-class {
+        tag.style.color = "blue";
+        tag.style.border = "10px solid red";
+        tag.style.fontSize = "70px";
+        tag.style.background = "yellow";
+        tag.style.marginTop = "200px";
+      }
+      // Add the new class to the selected element,
+      tag.classList.add("some-class");
+  
+  2. classList
+    A list that contains the classes for a given element. It is not an array,
+      var tag = document.querySelector("h1");
+      tag.classList //returns the list of classes of the object
+      // Add a class to the selected element,
+      tag.classList.add("another-class");
+      // Remove a class,
+      tag.classList.remove("another-class");
+      // Toggle a class,
+      tag.classList.toggle("another-class");
+
+    Toggle adds the class to the object and returns 'true' if it doesn't have it. Or it deletes it and returns 'false' if it has that class. It is a very useful method,
+      tag.classList.toggle("another-class"); //true or false
