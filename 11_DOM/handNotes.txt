@@ -163,3 +163,47 @@ Manipulating
 
     Toggle adds the class to the object and returns 'true' if it doesn't have it. Or it deletes it and returns 'false' if it has that class. It is a very useful method,
       tag.classList.toggle("another-class"); //true or false
+
+  3. textContent
+    We can show/change the content of a text with textContent, but it's a little bit dangerous in terms of keeping the 'strong' or 'em' or any tags inside of an element because it just returns the pure text inside of an element and directly overwrites what we type and it treats our input as a pure text even we include some tags. So if there is any tag inside of an element we don't want to directly overwrite its content... Here we have the following tag on number 4 which keeps those inner tags!
+      ------------------------------------------------------
+      <h1>My World</h1>
+      <p>This is an <strong>awesome</strong> paragraph.</p>
+      ------------------------------------------------------
+      My World
+      This is an awesome paragraph.
+      ------------------------------------------------------
+      var tag = document.querySelector("p");
+      // Retrieve the text content,
+      tag.textContent //"This is an awesome paragraph"
+      // Alter the text content,
+      tag.textContent = "New <em>content</em>...";
+      // Following style is widely used,
+      document.querySelector("h1").textContent = "My World, My Rules";
+      ------------------------------------------------------
+      My World, My Rules
+      New <em>content</em>...
+      ------------------------------------------------------
+      // Following selection selects all the strings on a webpage,
+      document.querySelector("body").textContent;
+
+  4. innerHTML
+    This is the property preserves the inner tags while showing and manipulating the content. So if we include some tags in our input it will render them (treat them as tags) and will manipulate accordingly,
+      ------------------------------------------------------
+      <ul>
+        <li>Cat</li>
+        <li>Dog</li>
+      </ul>
+      ------------------------------------------------------
+        .Cat
+        .Dog
+      ------------------------------------------------------
+      var ul = document.getElementsByTagName("ul")[0];
+      // Retrieve the all content,
+      ul.innerHTML //"<li>Cat</li> <li>Dog</li>"
+      // Alter the content with tags,
+      ul.innerHTML //"<li>Bird</li> <li>Bear</li>"
+      ------------------------------------------------------
+        .Bird
+        .Bear
+      ------------------------------------------------------
