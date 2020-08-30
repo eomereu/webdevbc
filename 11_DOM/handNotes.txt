@@ -207,3 +207,22 @@ Manipulating
         .Bird
         .Bear
       ------------------------------------------------------
+
+  5. getAttribute("atrName") - setAttribute("atrName", "newValue")
+      We can use these to read or change/write attributes like 'src' or 'href' etc.
+        ------------------------------------------------------
+        <a href="https://www.google.com">I take you to Google</a>
+        <img src="logo.png">
+        ------------------------------------------------------
+        var link = document.querySelector("a");
+        link.getAttribute("href"); //"https://www.google.com"
+        // Change 'href' attribute,
+        link.setAttribute("href", "https://www.twitter.com");
+        link.textContent = "Now I take you to Twitter";
+        var img = document.querySelector("img");
+        // Change 'src' attribute
+        img.setAttribute("src", "corgi.png");
+        ------------------------------------------------------
+        <a href="https://www.twitter.com">I take you to Twitter</a>
+        <img src="corgi.png">
+        ------------------------------------------------------
