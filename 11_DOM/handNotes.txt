@@ -226,3 +226,24 @@ Manipulating
         <a href="https://www.twitter.com">I take you to Twitter</a>
         <img src="corgi.png">
         ------------------------------------------------------
+
+  EX: Playing With Google: Along with manipulating the objects one by one here we will also change them by using loops and iterating over them,
+    // Selecting the Google logo,
+    var logo = document.querySelector("#hplogo");
+    // Changing the logo by atr 'srcset'
+    logo.setAttribute("srcset", "https://brandingbycontext.com/images/nice-logo-portfolio/jack-oneill-logo-designer.jpg")
+    // Setting the 'padding-top' atr to zero,
+    logo.style = "padding-top: 0px";
+    // Setting the height and width to 210px,
+    logo.style.height = "190px";
+    logo.style.width = "190px";
+    // Applying a border,
+    logo.style.border = "2px solid red";
+    // Selecting all links on the page,
+    var links = document.getElementsByTagName("a");
+    // Iterating over them and changing some styling,
+    for(i = 0; i < links.length; i++){
+      links[i].style = "border: 2px dashed blue; color: red";
+      links[i].style.background = "yellow";
+      links[i].setAttribute("href", "https://www.bing.com")
+    }
