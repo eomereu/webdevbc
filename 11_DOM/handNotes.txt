@@ -247,3 +247,4 @@ Manipulating
       links[i].style.background = "yellow";
       links[i].setAttribute("href", "https://www.bing.com")
     }
+  PS: A picture of this manipulated google can be seen by "GoogleManipulated.jpg"
