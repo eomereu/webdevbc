@@ -1,0 +1,40 @@
+- We select an element and then add an event listener,
+    "Listen for a click on this <button>"
+    "Listen for a hover event on the <h1>"
+    "Listen for a keypress event on text input"
+
+- element.addEventListener(type, functionToCall);
+    To add a lsitener we use the method above,
+      var button = document.querySelector("button");
+      var paragrapgh = document.querySelector("p");
+      button.addEventListener("click", function(){
+        paragraph.textContent("The button is clicked!")
+      });
+
+- We can have more than one listener on an element,
+    var h1 = document.getElementsByTagName("h1")[0];
+    h1.addEventListener("click", function(){
+      h1.style = "background-color: pink;"
+    });
+
+- Inside of a listener, "this" keyword refers to that element that is being listened,
+    ----------------------------------------------
+    .clicked{
+      background-color: green;
+    }
+    ----------------------------------------------
+    var lis = document.querySelectorAll("li");
+    for(var i = 0; i < lis.length; i++){
+      lis[i].addEventListener("click", function(){
+        this.classList.toggle("clicked");
+      });
+    }
+
+- We don't have to use anonymous functions, we can also use predefined functions instead,
+    var lis = document.querySelectorAll("li");
+    function toggleClassClicked(){
+      this.classList.toggle("clicked");
+    }
+    for(var i = 0; i < lis.length; i++){
+      lis[i].addEventListener("click", toggleClassClicked);
+    }
