@@ -227,6 +227,13 @@ Manipulating
         <img src="corgi.png">
         ------------------------------------------------------
 
+  6. value
+    We use this property to get the value of an input form. It takes it as string,
+      defaultMaxScoreStr = document.querySelector("#score").value;
+    To turn it into number we use "Number()" method,
+      defaultMaxScore = Number(document.querySelector("#score").value);
+
+
   EX: Playing With Google: Along with manipulating the objects one by one here we will also change them by using loops and iterating over them,
     // Selecting the Google logo,
     var logo = document.querySelector("#hplogo");
