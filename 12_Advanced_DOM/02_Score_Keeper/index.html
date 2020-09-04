@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- Including My CSS File -->
+    <link rel="stylesheet" href="app.css">
+    
+    <!-- Title -->
+    <title>Score Keeper</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1><span id="p1Score">0</span> to <span id="p2Score">0</span></h1>
+      <p>Playing to: <span id="maxScore">5</span></p>
+
+      <form>
+        <div class="form-inline">
+            <input type="number" min="1" class="form-control" placeholder="Max Score">
+            <button type="button">Player One</button>
+            <button type="button">Player Two</button>
+            <button type="button">Reset</button>
+        </div>
+      </form>
+
+    </div>
+
+    <!-- Including My JS File -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
