@@ -40,3 +40,11 @@
     }
 
 - "document.body" directly selects the body w/o our own assignment.
+
+------------------// BOOTSTRAP, CSS, HTML RELATED \\-------------------
+- <input type="number" min="1" max="99"...
+    Creates a number only input box
+
+- <button type="button">Player Two</button>
+    The 'type="button"' ATR prevents button to refresh the page onclick
+-----------------------------------------------------------------------
