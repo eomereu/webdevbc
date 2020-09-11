@@ -10,6 +10,7 @@
       button.addEventListener("click", function(){
         paragraph.textContent("The button is clicked!")
       });
+    All event types can be found at: https://developer.mozilla.org/en-US/docs/Web/Events
     Some of the 'type's we can use with eventListener,
       1.click
         This event is used when we want to add an event based on clicking,
@@ -21,6 +22,11 @@
           document.querySelector("#score").addEventListener("change", function(){
             defaultMaxScore = Number(document.querySelector("#score").value);
           });
+      3.mouseover
+        This one is triggered when we move mouse on an element
+      4.mouseout
+        This one is triggered when we move mouse out of an element
+      PS: So by using 2 events above we can form a mouse hover effect.
 
 - We can have more than one listener on an element,
     var h1 = document.getElementsByTagName("h1")[0];
@@ -58,9 +64,14 @@
 
 - <button type="button">Player Two</button>
     The 'type="button"' ATR prevents button to refresh the page onclick
------------------------------------------------------------------------
 
-- "change" event is used when we want to add an event listener to an input,
-    document.querySelector(".form-control").addEventListener("change", function(){
-      defaultMaxScore = Number(document.querySelector(".form-control").textContent);
-    });
+- To directly make CSS styling inside the HTML file we can add the following tags right after 'title'
+  <!-- CSS Directly Implemented -->
+  <style type="text/css">
+  .purple {
+    background-color: purple;
+  }
+
+- Following attribute hanges the opacity,
+    opacity: 0.5;
+-----------------------------------------------------------------------
