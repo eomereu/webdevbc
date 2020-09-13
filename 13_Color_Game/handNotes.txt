@@ -1,0 +1,11 @@
+- Math.random()
+    Produces a float between 0 and 1,
+      0.09658498258165538
+      0.11707296839731063
+    If we multiplay it with 6 for example, it will produce that float between 0 and 5,
+      0.5453294849428691
+      4.907441825449483
+
+- Math.floor()
+    Rounds the number to its floor. We can use it with Math.random() function,
+      Math.floor(Math.random() * 6) //will produce ints [0,6)

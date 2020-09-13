@@ -4,7 +4,7 @@ body {
 
 .square {
   width: 30%;
-  background-color: purple;
+  /*background-color: purple;*/
   padding-bottom: 30%;
   margin: 1.66%;
   float: left;
@@ -16,5 +16,9 @@ body {
 }
 
 h1 {
+  color: white;
+}
+
+span {
   color: white;
 }
