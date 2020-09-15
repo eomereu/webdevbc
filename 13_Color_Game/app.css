@@ -10,15 +10,18 @@ body {
   float: left;
 }
 
+#stripe {
+  background-color: white;
+  height: 30px;
+  text-align: center;
+  color: black;
+}
+
 #container {
   margin: 0 auto;
   max-width: 600px;
 }
 
 h1 {
-  color: white;
-}
-
-span {
   color: white;
 }
