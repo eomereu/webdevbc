@@ -17,6 +17,10 @@ body {
   color: black;
 }
 
+.selected {
+  background-color: blue;;
+}
+
 #container {
   margin: 0 auto;
   max-width: 600px;
