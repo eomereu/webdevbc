@@ -13,7 +13,6 @@ var numSquares = 6; //by default it's hard mode so there must be 6 squares
 var colors = generateRandomColors(numSquares);
 var pickedColor = pickColor();
 colorDisplay.textContent = pickedColor;
-colorDisplay.style = "text-transform: uppercase;";
 
 // colorize squares for the first time
 colorizeSquares();
@@ -95,7 +94,7 @@ function functionalizeThings(){
 function changeDisplaysViuals(){
   colorDisplay.textContent = pickedColor;
   messageDisplay.textContent = "";
-  h1.style.backgroundColor = "#232323";
+  h1.style.backgroundColor = "steelblue";
   resetBtn.textContent = "New Colors";
 }
 
