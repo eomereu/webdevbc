@@ -56,6 +56,7 @@ h1 {
 button {
   color: steelblue;
   border: none;
+  outline: none;
   background: none;
   font-weight: 700;
   font-size: inherit;

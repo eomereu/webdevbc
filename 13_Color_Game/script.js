@@ -3,9 +3,8 @@ var squares = document.querySelectorAll(".square");
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
-var resetBtn = document.querySelector("#reset");
-var easyBtn = document.querySelector("#easy");
-var hardBtn = document.querySelector("#hard");
+var resetButton = document.querySelector("#reset");
+var modeButtons = document.getElementsByClassName("modeBtn");
 
 
 // ___MAIN___ \\
@@ -14,16 +13,31 @@ var colors = generateRandomColors(numSquares);
 var pickedColor = pickColor();
 colorDisplay.textContent = pickedColor;
 
-// colorize squares for the first time
-colorizeSquares();
+reset();
 functionalizeThings();
+// __________ \\
 
 
 // ___FUNCTIONS___ \\
-function colorizeSquares(){
+function reset(){
+  // generate all new colors based on the selected game mode (number of squares actually), colorize squares and pick a new color
+  colors = generateRandomColors(numSquares);
+  // colorizeSquares()
   for(var i = 0; i < squares.length; i++){
-    squares[i].style.backgroundColor = colors[i];
+    if(colors[i]){
+      squares[i].style.backgroundColor = colors[i];
+      squares[i].style.display = "block";
+    } else {
+      squares[i].style.display = "none";
+    }
   }
+  pickedColor = pickColor();
+  // change/reset the displays/visuals
+  // changeDisplaysViuals();
+  colorDisplay.textContent = pickedColor;
+  messageDisplay.textContent = "";
+  h1.style.backgroundColor = "steelblue";
+  resetButton.textContent = "New Colors";
 }
 
 function functionalizeThings(){
@@ -39,7 +53,7 @@ function functionalizeThings(){
         messageDisplay.textContent = "Correct!";
         changeColors(clickedColor);
         h1.style.backgroundColor = clickedColor;
-        resetBtn.textContent = "Play Again?";
+        resetButton.textContent = "Play Again?";
       } else {
         this.style.backgroundColor = "#232323";
         messageDisplay.textContent = "Try Again!";
@@ -47,55 +61,20 @@ function functionalizeThings(){
     });
   }
   // ___Functionalize Reset Button___ \\
-  resetBtn.addEventListener("click", function(){
-    // generate all new colors based on the selected game mode (number of squares actually), colorize squares and pick a new color
-    colors = generateRandomColors(numSquares);
-    colorizeSquares();
-    pickedColor = pickColor();
-    // change/reset the displays/visuals
-    changeDisplaysViuals();
-  });
-  // ___Functionalize Easy Button___ \\
-  easyBtn.addEventListener("click", function(){
-    // arrange the selected styling
-    this.classList.add("selected");
-    hardBtn.classList.remove("selected");
-    // create 3 colors colorozing only first 3 squares and pick a new color
-    numSquares = 3;
-    colors = generateRandomColors(numSquares);
-    colorizeSquares(); //here it won't recolorize the last 3 square! It's not a big deal because we'll hide them anyway...
-    pickedColor = pickColor();
-    // change/reset the displays/visuals
-    changeDisplaysViuals();
-    // hide last 3 non-remodified squares
-    squares[3].style.display = "none";
-    squares[4].style.display = "none";
-    squares[5].style.display = "none";
-  });
-  // ___Functionalize Hard Button___ \\
-  hardBtn.addEventListener("click", function(){
-    this.classList.add("selected");
-    easyBtn.classList.remove("selected");
-    // create 6 colors, colorizing all squares again and pick a new color
-    numSquares = 6;
-    colors = generateRandomColors(numSquares);
-    colorizeSquares();
-    pickedColor = pickColor();
-    // change/reset the displays/visuals and the game mode
-    changeDisplaysViuals();
-    gameModeHard = true;
-    // unhide the last 3 squares
-    squares[3].style.display = "block";
-    squares[4].style.display = "block";
-    squares[5].style.display = "block";
-  });
-}
-
-function changeDisplaysViuals(){
-  colorDisplay.textContent = pickedColor;
-  messageDisplay.textContent = "";
-  h1.style.backgroundColor = "steelblue";
-  resetBtn.textContent = "New Colors";
+  resetButton.addEventListener("click", reset);
+  // ___Functionalize Mode Buttons___ \\
+  for(var i = 0; i < modeButtons.length; i++){
+    modeButtons[i].addEventListener("click", function(){
+      // arrange the selected styling
+      modeButtons[0].classList.remove("selected");
+      modeButtons[1].classList.remove("selected");
+      this.classList.add("selected");
+      // figure out how many squares to show
+      this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
+      // reset
+      reset();
+    });
+  }
 }
 
 function changeColors(color){
