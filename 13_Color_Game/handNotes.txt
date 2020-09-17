@@ -13,6 +13,15 @@
 - Ternary Operator
     this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
 
+- In the future we will design our code according to design patterns, the most popular one is "Module Design Pattern". There are no floating variables or functions. They are all set with a base object, both for clean code and preventing name collisions,
+    var game = {}
+    game.init = function(){
+      setupSquares();
+      setupButtons();
+      reset();
+    }
+    game.init();
+
 ------------------// BOOTSTRAP, CSS, HTML RELATED \\-------------------
 - Following code segment provides a transition effect by any changes on the related element. Last two lines ensure the compatibility with various browsers.
     transition: all 0.3s;
@@ -33,6 +42,10 @@
       outline: none; /*deactivates the outline effect when clicked on a button*/
       background: none; /*deactivates the built-in white background of buttons*/
       font-size: inherit; /*inherits the font-size from its surrounding element*/
+    }
+    button:hover {
+      color: white;
+      background: steelblue;
     }
     .square {
       border-radius: 10%; /*rounds a square's corners of a square*/
