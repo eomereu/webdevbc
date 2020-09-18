@@ -101,3 +101,37 @@
 	width: 80%;
 
 - <hr> tag adds a horizontal line on the page. No closing tags etc.
+
+- Following code segment provides a transition effect by any changes on the related element. Last two lines ensure the compatibility with various browsers.
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+  If we want the transition effect just for a specific change then we type that attribute instead of 'all' keyword,
+    transition: background 0.5s;
+
+- Some useful stylings,
+    font-weight: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    height: 100%;
+    .button {
+      border: none; /*cancels the borders (of a button)*/
+      outline: none; /*deactivates the outline effect when clicked on a button*/
+      background: none; /*deactivates the built-in white background of buttons*/
+      font-size: inherit; /*inherits the font-size from its surrounding element*/
+    }
+    button:hover {
+      color: white;
+      background: steelblue;
+    }
+    .square {
+      border-radius: 10%; /*rounds a square's corners of a square*/
+      float: left; /*allows to place realted divs next to each other rather than one at a line*/
+      width: 30%; /*sets an exact width to the element*/
+    }
+    #message {
+      display: inline-block;
+      width: 20%;
+    }
