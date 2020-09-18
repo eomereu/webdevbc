@@ -59,11 +59,11 @@ function setupButtons(){
       // figure out how many squares to show
       this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
       // setup resetBtn
-      resetButton.addEventListener("click", reset);
       // reset
       reset();
     });
   }
+  resetButton.addEventListener("click", reset);
 }
 
 function reset(){
