@@ -27,6 +27,8 @@ Or linking to a [CDN(a hosted copy)](https://code.jquery.com/) directly:
 ```javascript
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 ```
+>We must include jQuery at the heading and our js file at the end of the body!
+
 Meanings of different versions are like the following:
 
 - ***uncompressed:*** The version that generally for developers with a proper coding and explaining comments inside but with more than 9k lines. Takes a longer time to load compared to minified (compressed) version.
@@ -57,15 +59,17 @@ $("selector").css(property, value); //or,
 $("selector").css(styleObject);
 // i.e.:
 $("#special").css("border", "2px solid red");
-
-// we can also pass in an object with styles,
+```
+We can pass in an object with styles,
+```javascript
 var styles = {
   backgroundColor: "pink",
   fontWeight: "bold"
 };
 $("#special").css(styles);
-
-// we can also select and manipulate all elements of a kind in one line,
+```
+We can select and manipulate all elements of a kind in one line,
+```javascript
 $("li").css("color", "purple");
 
 $("p").css({
@@ -75,4 +79,14 @@ $("p").css({
   color: "white"
 });
 ```
-Here inside inside this ***styling object*** or ***property*** we must use the properties that contains a ***dash (-)*** with removing the dash and converting the first letter of the following word to uppercase as seen above with ***fontSize*** and ***textTransform*** properties. Otherwise we get an error!
+To select only all the divs with specified class,
+```javascript
+$("div.highlight")
+```
+To select the first element of a group,
+```javascript
+$("div:first") //js method (more practical but slower)
+$("div:first-of-type") //built-in css method (less practical but faster)
+```
+
+Here inside inside this *styling object* or *property* we must use the properties that contains a *dash (-)* with removing the dash and converting the first letter of the following word to uppercase as seen above with *fontSize* and *textTransform* properties. Otherwise we get an error!
