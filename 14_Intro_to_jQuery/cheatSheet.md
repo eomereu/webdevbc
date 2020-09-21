@@ -29,6 +29,8 @@ Or linking to a [CDN(a hosted copy)](https://code.jquery.com/) directly:
 ```
 >We must include jQuery at the heading and our js file at the end of the body!
 
+>To check simply if the jQuery is added correctly, on the console on the page we can type `jQuery` and hit enter. It must return sth like `function (a,b){return new n.fn.init(a,b)}` if correctly included...
+
 Meanings of different versions are like the following:
 
 - ***uncompressed:*** The version that generally for developers with a proper coding and explaining comments inside but with more than 9k lines. Takes a longer time to load compared to minified (compressed) version.
@@ -50,9 +52,10 @@ $("#bonus");
 // to select all a tags inside of li's,
 $("li a");
 ```
+***
 
 ### Manipulating Style
-&nbsp;-&nbsp;**.css()** method is jQuery's interface to styling:
+&nbsp;-&nbsp;`.css()` method is jQuery's interface to styling:
 ```javascript
 // select element with id "special" and give it a border,
 $("selector").css(property, value); //or,
@@ -88,5 +91,33 @@ To select the first element of a group,
 $("div:first") //js method (more practical but slower)
 $("div:first-of-type") //built-in css method (less practical but faster)
 ```
-
 Here inside inside this *styling object* or *property* we must use the properties that contains a *dash (-)* with removing the dash and converting the first letter of the following word to uppercase as seen above with *fontSize* and *textTransform* properties. Otherwise we get an error!
+***
+
+### [Common jQuery Methods](https://api.jquery.com/)
+- val()
+- [`text()`](https://api.jquery.com/text/)  
+  Actually does the same thing as `.textContent`. It retrieves just the strings inside of an element and if we pass a value it will modify the content with it. This method is called as *HTML safe* and actually provides us a safe way while getting **input** from user!
+  ```javascript
+  //<h1>Grüß dich!</h1>
+  > $("h1").text()
+  "Grüß dich!"
+  > $("h1").text("Servus!")
+  > $("h1").text()
+  "Servus!"
+  ```
+
+- attr()
+- [`html()`](https://api.jquery.com/html/)
+  Works in the same way with `.innerHTML` from DOM. It retrieves the content with HTML stuff included and again if we pass a value with HTML stuff it modifies the content accordingly:
+  ```javascript
+  //<h1>... <strong>keiner</strong> meiner Freunde ...</h1>
+  > $("h1").html()
+  "... <strong>keiner</strong> meiner Freunde ..."
+  > $("h1").html("... keiner <em>meiner</em> Freunde ...")
+  > $("h1").html()
+  "... keiner <em>meiner</em> Freunde ..."
+  ```
+- addClass()
+- removeClass()
+- toggleClass()
