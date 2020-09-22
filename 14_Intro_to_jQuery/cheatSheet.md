@@ -42,15 +42,15 @@ Meanings of different versions are like the following:
 ### jQuery Selectors
 &nbsp;-&nbsp;Selecting with jQuery is like ***querySelectorAll***, in that we provide a CSS style selector and jQuery will return all matching elements:
 ```javascript
-$( "selectorGoesHere ");
+$( "selectorGoesHere" );
 // to select all img tags,
-$( "img ");
+$( "img" );
 // to select all elements with class 'sale',
-$( ".sale ");
+$( ".sale" );
 // to select element with id "bonus",
-$( "#bonus ");
+$( "#bonus" );
 // to select all a tags inside of li's,
-$( "li a ");
+$( "li a" );
 ```
 ***
 
@@ -58,16 +58,16 @@ $( "li a ");
 &nbsp;-&nbsp;`.css(prop)` - `css(prop, val)` - `css(prop, obj)` method is jQuery's interface to styling.  
 Passing in just property will return us its value,
 ```javascript
-> $( "img ").css( "width ")
+> $( "img" ).css( "width" )
 "1533px"
 ```
 Passing in both *property* and *value* will either apply or set/change the property to given value:
 ```javascript
 // select element with id "special" and give it a border,
-$( "selector ").css(property, value); //or,
-$( "selector ").css(styleObject);
+$( "selector" ).css(property, value); //or,
+$( "selector" ).css(styleObject);
 // i.e.:
-$( "#special ").css( "border", "2px solid red ");
+$( "#special" ).css( "border", "2px solid red" );
 ```
 Passing in an object with styles in it allows us to manipulate multiple properties in one go:
 ```javascript
@@ -75,13 +75,13 @@ var styles = {
   backgroundColor: "pink",
   fontWeight: "bold"
 };
-$( "#special ").css(styles);
+$( "#special" ).css(styles);
 ```
 We can select and manipulate all elements of a kind in one line,
 ```javascript
-$( "li ").css( "color", "purple ");
+$( "li" ).css( "color", "purple" );
 
-$( "p ").css({
+$( "p" ).css({
   fontSize: "10px",
   textTransform: "uppercase",
   background: "#232323",
@@ -90,16 +90,16 @@ $( "p ").css({
 ```
 To select only all the divs with specified class,
 ```javascript
-$( "div.highlight ");
+$( "div.highlight" );
 ```
 To select the first element of a group,
 ```javascript
-$( "div:first "); //js method (more practical but slower)
-$( "div:first-of-type "); //built-in css method (less practical but faster)
+$( "div:first" ); //js method (more practical but slower)
+$( "div:first-of-type" ); //built-in css method (less practical but faster)
 ```
 To select the last element we can use `.last()` method:
 ```javascript
-$( "div ").last();
+$( "div" ).last();
 ```
 Here inside inside this *styling object* or *property* we must use the properties that contains a *dash (-)* with removing the dash and converting the first letter of the following word to uppercase as seen above with *fontSize* and *textTransform* properties. Otherwise we get an error!
 ***
@@ -109,10 +109,10 @@ Here inside inside this *styling object* or *property* we must use the propertie
   Actually does the same thing as `.textContent`. It retrieves just the strings inside of an element and if we pass a value it will modify the content with it. This method is called as *HTML safe* and actually provides us a safe way while getting **input** from user!
   ```javascript
   //<h1>Grüß dich!</h1>
-  > $( "h1 ").text();
+  > $( "h1" ).text();
   "Grüß dich!"
-  > $( "h1 ").text( "Servus! ");
-  > $( "h1 ").text();
+  > $( "h1" ).text( "Servus!" );
+  > $( "h1" ).text();
   "Servus!"
   ```
 
@@ -120,10 +120,10 @@ Here inside inside this *styling object* or *property* we must use the propertie
   Works in the same way with `.innerHTML` from DOM. It retrieves the content with HTML stuff included and again if we pass a value with HTML stuff it modifies the content accordingly:
   ```javascript
   //<h1>... <strong>keiner</strong> meiner Freunde ...</h1>
-  > $( "h1 ").html();
+  > $( "h1" ).html();
   "... <strong>keiner</strong> meiner Freunde ..."
-  > $( "h1 ").html( "... keiner <em>meiner</em> Freunde ... ");
-  > $( "h1 ").html();
+  > $( "h1" ).html( "... keiner <em>meiner</em> Freunde ..." );
+  > $( "h1" ).html();
   "... keiner <em>meiner</em> Freunde ..."
   ```
 
@@ -131,27 +131,27 @@ Here inside inside this *styling object* or *property* we must use the propertie
   Gets the value of the specified attribute of the selected element if *atr* is given as only parameter:
   ```javascript
   // <a href="https://www.google.com">Take me to Google!</a>
-  > $( "a ").attr( "href ");
+  > $( "a" ).attr( "href" );
   "https://www.google.com"
   ```
   If both *atr* and *val* parameters are given, it sets that *atr* to that *val*. More than one atr can be changed via giving an object:
   ```javascript
   //<img id="inn" src="inn.jpg" alt="Inn">Grüß dich!
-  > $( "#inn ").attr( "alt", "Inn Fluss ");
+  > $( "#inn" ).attr( "alt", "Inn Fluss" );
   //<img id="inn" src="inn.jpg" alt="Inn Fluss">Grüß dich!
-  > $( "#inn ").attr({
+  > $( "#inn" ).attr({
     alt: "Wundervoller Inn Fluss",
     title: "Hans Krille"
   });
-  > $( "h1 ").text();
+  > $( "h1" ).text();
   "Servus!"
   ```
   We can even manipulate type of *input boxes* as its feature depends on its *value*:
   ```javascript
   // <input type="text" placeholder="input">
-  $( "input ").attr( "type", "color ");
-  $( "input ").attr( "type", "number ");
-  $( "input ").attr( "type", "checkbox ");
+  $( "input" ).attr( "type", "color" );
+  $( "input" ).attr( "type", "number" );
+  $( "input" ).attr( "type", "checkbox" );
   ```
 
 - [`val()` - `val(val)`](https://api.jquery.com/val/)  
@@ -162,35 +162,35 @@ Here inside inside this *styling object* or *property* we must use the propertie
   // ---------------
   // |inp          |
   // ---------------
-  > $( "input ").val();
+  > $( "input" ).val();
   ""
   ```
   If we pass in a value, it will set the value of that input to that value. This is used especially when the value of the input box is wanted to be cleared, *i.e. after typing a value to be added to a list and hit Enter*
   ```javascript
-  > $( "input ").val( "Eigentlich ");
+  > $( "input" ).val( "Eigentlich" );
   // ---------------
   // |Eigentlich   |
   // ---------------
-  > $( "input ").val( " "); //clears the box
+  > $( "input" ).val( "" ); //clears the box
   ```
   On dropdown menus:
   ```javascript
-  $( "select ").val(); //returns the current value (selection)
+  $( "select" ).val(); //returns the current value (selection)
   ```
   > For selects, checkboxes and radio buttons, you can use `:checked` to select the right elements. For example:
   ```javascript
   // <select id="foo">...</select>
   // Get the value from the selected option in a dropdown
-  $(  "select#foo option:checked" ).val();
+  $( "select#foo option:checked" ).val();
   
   // Get the value from a dropdown select directly
-  $(  "select#foo" ).val();
+  $( "select#foo" ).val();
   
   // Get the value from a checked checkbox
-  $(  "input[type=checkbox][name=bar]:checked" ).val();
+  $( "input[type=checkbox][name=bar]:checked" ).val();
   
   // Get the value from a set of radio buttons
-  $(  "input[type=radio][name=baz]:checked" ).val();
+  $( "input[type=radio][name=baz]:checked" ).val();
   ```
 
 - addClass()
