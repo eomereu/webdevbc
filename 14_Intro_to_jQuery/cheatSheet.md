@@ -55,7 +55,13 @@ $("li a");
 ***
 
 ### Manipulating Style
-&nbsp;-&nbsp;`.css()` method is jQuery's interface to styling:
+&nbsp;-&nbsp;`.css(prop)` - `css(prop, val)` - `css(prop, obj)` method is jQuery's interface to styling.  
+Passing in just property will return us its value,
+```javascript
+> $("img").css("width")
+"1533px"
+```
+Passing in both *property* and *value* will either apply or set/change the property to given value:
 ```javascript
 // select element with id "special" and give it a border,
 $("selector").css(property, value); //or,
@@ -63,7 +69,7 @@ $("selector").css(styleObject);
 // i.e.:
 $("#special").css("border", "2px solid red");
 ```
-We can pass in an object with styles,
+Passing in an object with styles in it allows us to manipulate multiple properties in one go:
 ```javascript
 var styles = {
   backgroundColor: "pink",
@@ -84,40 +90,109 @@ $("p").css({
 ```
 To select only all the divs with specified class,
 ```javascript
-$("div.highlight")
+$("div.highlight");
 ```
 To select the first element of a group,
 ```javascript
-$("div:first") //js method (more practical but slower)
-$("div:first-of-type") //built-in css method (less practical but faster)
+$("div:first"); //js method (more practical but slower)
+$("div:first-of-type"); //built-in css method (less practical but faster)
+```
+To select the last element we can use `.last()` method:
+```javascript
+$("div").last();
 ```
 Here inside inside this *styling object* or *property* we must use the properties that contains a *dash (-)* with removing the dash and converting the first letter of the following word to uppercase as seen above with *fontSize* and *textTransform* properties. Otherwise we get an error!
 ***
 
 ### [Common jQuery Methods](https://api.jquery.com/)
-- val()
-- [`text()`](https://api.jquery.com/text/)  
+- [`text()` - `text(val)`](https://api.jquery.com/text/)  
   Actually does the same thing as `.textContent`. It retrieves just the strings inside of an element and if we pass a value it will modify the content with it. This method is called as *HTML safe* and actually provides us a safe way while getting **input** from user!
   ```javascript
   //<h1>Grüß dich!</h1>
-  > $("h1").text()
+  > $("h1").text();
   "Grüß dich!"
-  > $("h1").text("Servus!")
-  > $("h1").text()
+  > $("h1").text("Servus!");
+  > $("h1").text();
   "Servus!"
   ```
 
-- attr()
-- [`html()`](https://api.jquery.com/html/)
+- [`html()` - `html(val)`](https://api.jquery.com/html/)
   Works in the same way with `.innerHTML` from DOM. It retrieves the content with HTML stuff included and again if we pass a value with HTML stuff it modifies the content accordingly:
   ```javascript
   //<h1>... <strong>keiner</strong> meiner Freunde ...</h1>
-  > $("h1").html()
+  > $("h1").html();
   "... <strong>keiner</strong> meiner Freunde ..."
-  > $("h1").html("... keiner <em>meiner</em> Freunde ...")
-  > $("h1").html()
+  > $("h1").html("... keiner <em>meiner</em> Freunde ...");
+  > $("h1").html();
   "... keiner <em>meiner</em> Freunde ..."
   ```
+
+- [`attr(atr)` - `attr(atr, val)`](https://api.jquery.com/attr/)  
+  Gets the value of the specified attribute of the selected element if *atr* is given as only parameter:
+  ```javascript
+  // <a href="https://www.google.com">Take me to Google!</a>
+  > $("a").attr("href");
+  "https://www.google.com"
+  ```
+  If both *atr* and *val* parameters are given, it sets that *atr* to that *val*. More than one atr can be changed via giving an object:
+  ```javascript
+  //<img id="inn" src="inn.jpg" alt="Inn">Grüß dich!
+  > $("#inn").attr("alt", "Inn Fluss");
+  //<img id="inn" src="inn.jpg" alt="Inn Fluss">Grüß dich!
+  > $("#inn").attr({
+    alt: "Wundervoller Inn Fluss",
+    title: "Hans Krille"
+  });
+  > $("h1").text();
+  "Servus!"
+  ```
+  We can even manipulate type of *input boxes* as its feature depends on its *value*:
+  ```javascript
+  // <input type="text" placeholder="input">
+  $("input").attr("type", "color");
+  $("input").attr("type", "number");
+  $("input").attr("type", "checkbox");
+  ```
+
+- [`val()` - `val(val)`](https://api.jquery.com/val/)  
+  Actually it's the wrapper for `.value()` in DOM. Thus it helps us extract the value from an input. On the other hand it is of course working with anything that has *value* attribute like dropdown menus etc.  
+  If we don't put in an argument it returns us the value of the input we select:
+  ```javascript
+  // Our input box: (<input type="text" placeholder="inp">)
+  // ---------------
+  // |inp          |
+  // ---------------
+  > $("input").val();
+  ""
+  ```
+  If we pass in a value, it will set the value of that input to that value. This is used especially when the value of the input box is wanted to be cleared, *i.e. after typing a value to be added to a list and hit Enter*
+  ```javascript
+  > $("input").val("Eigentlich");
+  // ---------------
+  // |Eigentlich   |
+  // ---------------
+  > $("input").val(""); //clears the box
+  ```
+  On dropdown menus:
+  ```javascript
+  $("select").val(); //returns the current value (selection)
+  ```
+  > For selects, checkboxes and radio buttons, you can use `:checked` to select the right elements. For example:
+  ```javascript
+  // <select id="foo">...</select>
+  // Get the value from the selected option in a dropdown
+  $( "select#foo option:checked" ).val();
+  
+  // Get the value from a dropdown select directly
+  $( "select#foo" ).val();
+  
+  // Get the value from a checked checkbox
+  $( "input[type=checkbox][name=bar]:checked" ).val();
+  
+  // Get the value from a set of radio buttons
+  $( "input[type=radio][name=baz]:checked" ).val();
+  ```
+
 - addClass()
 - removeClass()
 - toggleClass()
