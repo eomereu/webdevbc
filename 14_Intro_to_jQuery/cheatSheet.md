@@ -94,8 +94,7 @@ $( "div.highlight" );
 ```
 To select the first element of a group,
 ```javascript
-$( "div:first" ); //js method (more practical but slower)
-$( "div:first-of-type" ); //built-in css method (less practical but faster)
+$( "div" ).first();
 ```
 To select the last element we can use `.last()` method:
 ```javascript
@@ -193,6 +192,18 @@ Here inside inside this *styling object* or *property* we must use the propertie
   $( "input[type=radio][name=baz]:checked" ).val();
   ```
 
-- addClass()
-- removeClass()
-- toggleClass()
+- addClass()  
+  Equals to `.classList.add()` in DOM. Simpley adds class/classes to the selected object/objects:
+  ```javascript
+  $( "li" ).addClass( "style:hover darkened" );
+  ```
+- removeClass()  
+  Equals to `.classList.remove()` in DOM. Simpley removes class/classes from the selected object/objects:
+  ```javascript
+  $( "li" ).removeClass( "light" );
+  ```
+- toggleClass()  
+  Equals to `.classList.toggle()` in DOM. Simpley toggles class/classes of the selected object/objects:
+  ```javascript
+  $( "li" ).toggleClass( "selected" );
+  ```
