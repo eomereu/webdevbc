@@ -192,17 +192,17 @@ Here inside inside this *styling object* or *property* we must use the propertie
   $("input[type=radio][name=baz]:checked").val();
   ```
 
-- addClass()  
+- [`addClass()`](https://api.jquery.com/addClass/)   
   Equals to `.classList.add()` in DOM. Simpley adds class/classes to the selected object/objects:
   ```javascript
   $("li").addClass("style:hover darkened");
   ```
-- removeClass()  
+- [`removeClass()`](https://api.jquery.com/removeClass/)  
   Equals to `.classList.remove()` in DOM. Simpley removes class/classes from the selected object/objects:
   ```javascript
   $("li").removeClass("light");
   ```
-- toggleClass()  
+- [`toggleClass()`] (https://api.jquery.com/toggleClass/)  
   Equals to `.classList.toggle()` in DOM. Simpley toggles class/classes of the selected object/objects:
   ```javascript
   $("li").toggleClass("selected");
