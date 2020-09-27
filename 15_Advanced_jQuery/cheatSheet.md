@@ -45,3 +45,29 @@
   });
   ```
 - [`on()`](https://api.jquery.com/on/)  
+  Works in the same way as `addEventListener` in DOM. It lets us specify the type of event to listen for. 
+  > This is the method used 99% of the time!
+  ```javascript
+  $("#submit").on("click", function(){
+    console.log("Another click!");
+  });
+  $("button").on("dbclick", function(){
+    console.log("Button double clicked!");
+  });
+
+  // hover: mouseenter + mouseleave
+  $("button").on("mouseenter", function(){
+    console.log("Mouse has once moved over button!");
+  });
+  $("button").on("mouseleave", function(){
+    console.log("Mouse left button!");
+  });
+
+  $("button").on("dragstart", function(){
+    console.log("Drag started!");
+  });
+  $("input[type='text']").on("keypress", function(){
+    console.log("Key press in an input!");
+  });
+  ```
+  > **`on()`** allows us to add listeners for all potential future elements on the contrary of `click()` which only adds listeners for existing elements when the page loads. That's why we will broadly use **`on("click", func)`** instead of `click()`!
