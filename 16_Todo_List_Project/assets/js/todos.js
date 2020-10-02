@@ -1,12 +1,22 @@
 // Check odd specific todos by clicking
-$("li").on("click", function(){
+$("ul").on("click", "li", function(){
   $(this).toggleClass("done");
 });
 
 // Click on X to delete Todos
-$(".delBtn").click(function(e){
+$("ul").on("click", ".delBtn", function(event){
   $(this).parent().fadeOut(400, function(){
     $(this).remove();
   });
-  e.stopPropagation();
+  event.stopPropagation();
+});
+
+$("input[type='text']").keypress(function(event){
+  if(event.which === 13){
+    // grabbing new todo text from input
+    var todoText = $(this).val();
+    $(this).val("");
+    //create a new li and add to ul
+    $("ul").append("<li><span class=\"delBtn\">X</span> " + todoText + "</li>");
+  }
 });
