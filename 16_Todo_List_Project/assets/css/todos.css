@@ -5,13 +5,6 @@ body {
   background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#container {
-  width: 360px;
-  margin: 100px auto;
-  background: #f7f7f7;
-  box-shadow: 0 0 3px rgba(0,0,0, 0.1);
-}
-
 h1 {
   background: #2980b9;
   color: white;
@@ -20,6 +13,36 @@ h1 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: normal;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+}
+
+input {
+  font-size: 18px;
+  color: #2980b9;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box;
+  border: 3px solid rgba(0,0,0, 0); /* */
+}
+
+#container {
+  width: 360px;
+  margin: 100px auto;
+  background: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0,0,0, 0.1);
 }
 
 .fa-plus-circle {
@@ -38,19 +61,9 @@ h1 {
   opacity: 0;
 }
 
-li:hover .delBtn {
-  width: 40px;
-  opacity: 1.0;
-}
-
-input {
-  font-size: 18px;
-  color: #2980b9;
-  background-color: #f7f7f7;
-  width: 100%;
-  padding: 13px 13px 13px 20px;
-  box-sizing: border-box;
-  border: 3px solid rgba(0,0,0, 0); /* */
+.done {
+  color: gray;
+  text-decoration: line-through;
 }
 
 input:focus {
@@ -59,24 +72,25 @@ input:focus {
   outline: none;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  background: #fff;
-  height: 40px;
-  line-height: 40px;
-  color: #666;
-}
-
 li:nth-child(2n){
   background: #f7f7f7;
 }
 
-.done {
-  color: gray;
-  text-decoration: line-through;
+li:hover .delBtn {
+  width: 40px;
+  opacity: 1.0;
+}
+
+/* Making the placeholder italic: */
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  font-style: italic;  
+}
+::-moz-placeholder {
+  font-style: italic;  
+}
+:-ms-input-placeholder {  
+  font-style: italic; 
 }

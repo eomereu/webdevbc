@@ -11,7 +11,7 @@ $("ul").on("click", ".delBtn", function(event){
   event.stopPropagation();
 });
 
-$("input[type='text']").keypress(function(event){
+$("input[type=\"text\"]").keypress(function(event){
   if(event.which === 13){
     // grabbing new todo text from input
     var todoText = $(this).val();
@@ -20,3 +20,7 @@ $("input[type='text']").keypress(function(event){
     $("ul").append("<li><span class=\"delBtn\"><i class=\"fas fa-trash-alt\"></i></span> " + todoText + "</li>");
   }
 });
+
+$(".fa-plus-circle").click(function(){
+  $("input[type=\"text\"]").fadeToggle(500);
+})
