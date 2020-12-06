@@ -29,3 +29,25 @@ Browsers come with Web APIs that are able to handle certain tasks in the backgro
 The JS call stack recognizes these Web API functions and passes them off to the browser to take care of
 
 Once the browser finishes those tasks, they return and are pushed onto the stack as a callback.
+
+### Callback Hell
+We can use asynchronous functions, setTimeout here, nestedly:
+```javascript
+setTimeout(() => {
+  document.body.style.backgroundColor = 'red';
+  setTimeout(() => {
+    document.body.style.backgroundColor = 'orange';
+    setTimeout(() => {
+      document.body.style.backgroundColor = 'yellow';
+    }, 1000)
+  }, 1000)
+}, 1000)
+
+//or to sum up:
+
+const delayedColorChange = (newColor, delay) => {
+  setTimeout(() => {
+    document.body.style.backgroundColor = newColor;
+  }, delay)
+}
+```
